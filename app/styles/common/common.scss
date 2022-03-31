@@ -1,7 +1,7 @@
 html {
   height: 100%; // Footer at bottom
 
-  font-size: calc(100vw / 1600 * 10);
+  font-size: calc(100vw / 1920 * 10);
 
   @media (max-width: 1024px) {
     font-size: calc(100vw / 768 * 10);
@@ -12,7 +12,7 @@ html {
   }
 
   @media (max-width: 500px) {
-    font-size: calc(100vw / 375 * 10);
+    font-size: calc(100vw / 320 * 10);
   }
 }
 
