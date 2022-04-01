@@ -1,0 +1,43 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.4rem;
+
+  @media (max-width: $lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $md) {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 2.4rem 0.6rem 2.4rem 3.2rem;
+    background-color: var(--gray2);
+  }
+
+  &__icon {
+    width: 6.4rem;
+    height: 6.4rem;
+    flex-shrink: 0;
+    margin-right: 3.2rem;
+
+    @media (max-width: $lg) {
+      margin-right: 2.2rem;
+    }
+
+    @media (max-width: $sm) {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  &__text {
+    @extend %text-32;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}

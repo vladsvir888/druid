@@ -1,0 +1,36 @@
+<section class="application">
+  @@include("blocks/splide-autoscroll/splide.html", {
+    "type": "application"
+  })
+  <div class="container">
+    <div class="application__inner">
+      <div class="application__info">
+        <h2 class="title">Индивидуальный подход к каждому изделию</h2>
+        <div class="application__text">
+          Связываясь с нами Вы получите неповторимый результат. Мы&nbsp;свяжемся с Вами для обсуждения деталей Вашего заказа
+        </div>
+      </div>
+      <div class="application__wrap-form">
+        <form class="application__form" action="/">
+          <div class="application__form-fields">
+            <label class="application__form-item">
+              <input class="application__form-input input" type="text">
+              <span class="application__form-placeholder">Имя</span>
+            </label>
+            <label class="application__form-item">
+              <input class="application__form-input input" type="text">
+              <span class="application__form-placeholder">
+                Телефон
+                <sup>*</sup>
+              </span>
+            </label>
+            <button class="btn btn__application" type="submit">Отправить</button>
+          </div>
+          <p class="application__form-text">
+            Заполняя эту форму, Вы даете согласие на обработку персональных данных
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

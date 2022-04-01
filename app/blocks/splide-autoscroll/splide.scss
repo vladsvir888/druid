@@ -6,4 +6,31 @@
       margin: 0 4rem;
     }
   }
+
+  &__img {
+    &--about {
+      width: 37.1rem;
+      height: 9.8rem;
+    }
+
+    &--catalog {
+      width: 40.9rem;
+      height: 9.8rem;
+    }
+
+    &--application {
+      width: 81.6rem;
+      height: 9.8rem;
+    }
+  }
+}
+
+.splide {
+  &-application {
+    margin-bottom: 7rem;
+
+    @media (max-width: $sm) {
+      margin-bottom: 2.4rem;
+    }
+  }
 }

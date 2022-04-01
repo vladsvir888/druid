@@ -20,6 +20,8 @@ body {
   --text-color: #1a1817;
   --bgc-color: #fff;
   --gray: #bbb;
+  --gray2: #f2f2f2;
+  --orange: #e09654;
 
   color: var(--text-color);
   background-color: var(--bgc-color);
@@ -67,6 +69,11 @@ img {
   }
 }
 
+input {
+  border: none;
+  background-color: transparent;
+}
+
 .container {
   max-width: 141.6rem;
   margin: 0 auto;
@@ -75,11 +82,9 @@ img {
 
 .visually-hidden {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
-
   clip: rect(0 0 0 0);
 }
 
@@ -88,4 +93,52 @@ img {
   @extend %pb-4;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.btn {
+  @extend %text-18;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+
+  @media (max-width: $lg) {
+    padding: 1.6rem 4.5rem;
+  }
+
+  &__where {
+    display: block;
+    width: 27rem;
+    margin: 0 auto;
+    padding: 1.6rem 6rem;
+    border: 0.2rem solid var(--text-color);
+    color: var(--text-color);
+    transition: background-color 0.5s, color 0.5s, border 0.5s;
+
+    &:hover {
+      color: #fff;
+      border: 0.2rem solid transparent;
+      background-color: var(--text-color);
+    }
+
+    @media (max-width: $sm) {
+      width: 23.5rem;
+      padding: 1.6rem 2rem;
+    }
+  }
+
+  &__application {
+    padding: 1rem 6rem;
+    background-color: var(--text-color);
+    color: #fff;
+    border: 0.2rem solid transparent;
+    transition: all 0.3s;
+
+    &:hover {
+      color: var(--text-color);
+      background-color: #fff;
+      border: 0.2rem solid var(--text-color);
+    }
+  }
 }

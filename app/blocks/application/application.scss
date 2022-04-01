@@ -1,0 +1,80 @@
+.application {
+  @extend %pb-8;
+
+  background: url('../../assets/images/application/application-bg.jpg') no-repeat 50% / cover;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem 6rem;
+
+    @media (max-width: $lg) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__text {
+    @extend %text-18;
+    font-weight: 400;
+  }
+
+  &__form {
+    max-width: 45.6rem;
+
+    > * {
+      &:not(:last-child) {
+        margin-bottom: 0.8rem;
+      }
+    }
+  }
+
+  &__form-fields {
+    display: flex;
+    flex-direction: column;
+
+    > * {
+      &:not(:last-child) {
+        margin-bottom: 3.2rem;
+      }
+    }
+  }
+
+  &__form-item {
+    position: relative;
+  }
+
+  &__form-input {
+    width: 100%;
+    padding: 0 1.2rem 1.2rem;
+    border-bottom: 0.1rem solid var(--text-color);
+
+    @extend %text-18;
+  }
+
+  &__form-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0.5rem;
+
+    @extend %text-18;
+
+    transition: all 0.3s;
+
+    sup {
+      color: var(--orange);
+    }
+  }
+
+  &__form-text {
+    @extend %text-12;
+  }
+}
+
+.application__form-item.is-active {
+  .application__form-placeholder {
+    left: 0;
+    top: -2.5rem;
+    color: var(--orange);
+    font-size: 1.2rem;
+  }
+}

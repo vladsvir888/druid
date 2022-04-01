@@ -1,7 +1,10 @@
 <main class="main-page">
   <section class="main-page__promo">
     <h1 class="visually-hidden">Druid - все о мебели!</h1>
-    <img class="main-page__bg-img" src="./assets/images/promo/promo-bg.jpg" alt="img">
+    <picture>
+      <source srcset="./assets/images/promo/promo-bg.webp" type="image/webp">
+      <img class="main-page__bg-img" src="./assets/images/promo/promo-bg.jpg" alt="img">
+    </picture>
     <div class="main-page__position-block">
       <img class="main-page__logo main-page__position-logo" src="./assets/images/icons/logo.svg" alt="logo">
       @@include("blocks/burger/burger.html", {
@@ -9,25 +12,18 @@
       })
       <div class="main-page__position-icons">
         <button class="main-page__position-btn">
-          <svg class="main-page__position-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9.1875 3C10.6581 2.99997 12.0979 3.40051 13.336 4.15409C14.5741 4.90767 15.5585 5.98267 16.1725 7.25154C16.7865 8.52041 17.0043 9.92989 16.8001 11.3128C16.5958 12.6956 15.978 13.9938 15.0201 15.0533L21.255 20.9736C21.4941 21.2006 21.4941 21.5815 21.255 21.8085C21.0328 22.0195 20.6843 22.0195 20.4622 21.8085L14.1828 15.8461C13.2413 16.6106 12.1192 17.1477 10.9119 17.4117C9.70472 17.6757 8.44819 17.6587 7.24937 17.3622C6.05055 17.0657 4.94496 16.4985 4.02676 15.7088C3.10855 14.9192 2.40494 13.9306 1.97585 12.8271C1.54675 11.7236 1.40489 10.538 1.56234 9.37126C1.71979 8.20451 2.17189 7.09117 2.88013 6.12608C3.58837 5.16098 4.53177 4.37272 5.62998 3.82842C6.72819 3.28412 7.94868 2.99991 9.1875 3ZM9.1875 4.12291C7.46245 4.12291 5.80805 4.7736 4.58826 5.93182C3.36847 7.09005 2.68319 8.66094 2.68319 10.2989C2.68319 11.9369 3.36847 13.5078 4.58826 14.666C5.80805 15.8243 7.46245 16.4749 9.1875 16.4749C10.9125 16.4749 12.5669 15.8243 13.7867 14.666C15.0065 13.5078 15.6918 11.9369 15.6918 10.2989C15.6918 8.66094 15.0065 7.09005 13.7867 5.93182C12.5669 4.7736 10.9125 4.12291 9.1875 4.12291Z" fill="#1A1817" stroke="#1A1817" stroke-width="0.5"/>
+          <svg class="main-page__position-icon" viewBox="0 0 100 100">
+            <use xlink:href="./assets/images/sprite.svg#search"></use>
           </svg>
         </button>
-        <button class="main-page__position-btn">
-          <svg class="main-page__position-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M21.2317 24H21.0749C2.94309 22.9569 0.368656 7.65231 0.00878891 2.98154C-0.0202079 2.61838 0.0227118 2.25307 0.135088 1.90653C0.247465 1.56 0.42709 1.23905 0.663672 0.962079C0.900253 0.685108 1.18914 0.457558 1.51378 0.292467C1.83842 0.127376 2.19244 0.0279894 2.55554 8.65468e-07H7.63983C8.00943 -0.00035707 8.37064 0.110317 8.67664 0.317689C8.98265 0.52506 9.21936 0.819573 9.35612 1.16308L10.7587 4.61539C10.8937 4.95097 10.9272 5.31884 10.8551 5.67332C10.7829 6.02779 10.6082 6.35324 10.3527 6.60923L8.38724 8.59385C8.69425 10.3392 9.52976 11.948 10.7807 13.2027C12.0317 14.4575 13.6377 15.2975 15.3816 15.6092L17.3839 13.6246C17.6437 13.3718 17.9721 13.2012 18.3281 13.1339C18.6842 13.0665 19.0522 13.1056 19.3863 13.2462L22.865 14.64C23.2032 14.7811 23.4917 15.0198 23.6939 15.3255C23.896 15.6313 24.0025 15.9904 24 16.3569V21.2308C24 21.9652 23.7083 22.6696 23.1892 23.1889C22.67 23.7082 21.9659 24 21.2317 24ZM2.777 1.84615C2.53228 1.84615 2.29757 1.94341 2.12453 2.11652C1.95148 2.28963 1.85426 2.52442 1.85426 2.76923V2.84308C2.27872 8.30769 5.0008 21.2308 21.1764 22.1538C21.2976 22.1613 21.4191 22.1448 21.5339 22.1052C21.6488 22.0656 21.7547 22.0038 21.8455 21.9232C21.9364 21.8425 22.0105 21.7448 22.0635 21.6355C22.1165 21.5262 22.1474 21.4074 22.1545 21.2862V16.3569L18.6758 14.9631L16.0275 17.5938L15.5846 17.5385C7.55678 16.5323 6.46795 8.50154 6.46795 8.41846L6.41258 7.97539L9.03316 5.32616L7.64905 1.84615H2.777Z" fill="#1A1817"/>
+        <a href="tel:+" class="main-page__position-btn">
+          <svg class="main-page__position-icon" viewBox="0 0 100 100">
+            <use xlink:href="./assets/images/sprite.svg#phone"></use>
           </svg>
-        </button>
+        </a>
         <button class="main-page__position-btn">
-          <svg class="main-page__position-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_106_560)">
-              <path d="M12.6441 23.9992C17.2355 24.0476 21.4295 21.4019 23.3636 17.2376C22.1464 17.7686 20.8282 18.0287 19.5005 17.9998C14.2962 17.994 10.0788 13.7765 10.0729 8.57219C10.125 5.0519 12.0674 1.83186 15.1569 0.143484C14.3237 0.037398 13.484 -0.0101 12.6441 0.00161754C6.01715 0.00161754 0.645264 5.37371 0.645264 12.0004C0.645264 18.6273 6.01715 23.9992 12.6441 23.9992Z" fill="#1A1817"/>
-            </g>
-            <defs>
-              <clipPath id="clip0_106_560">
-                <rect width="24" height="24" fill="white"/>
-              </clipPath>
-            </defs>
+          <svg class="main-page__position-icon" viewBox="0 0 100 100">
+            <use xlink:href="./assets/images/sprite.svg#moon"></use>
           </svg>
         </button>
       </div>
@@ -74,14 +70,26 @@
           </div>
           <a class="main-page__about-link" href="#">
             <span>Подробнее</span>
-            <svg class="main-page__about-icon" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M24.7071 8.70711C25.0976 8.31658 25.0976 7.68342 24.7071 7.2929L18.3431 0.928934C17.9526 0.538409 17.3195 0.538409 16.9289 0.928934C16.5384 1.31946 16.5384 1.95262 16.9289 2.34315L22.5858 8L16.9289 13.6569C16.5384 14.0474 16.5384 14.6805 16.9289 15.0711C17.3195 15.4616 17.9526 15.4616 18.3431 15.0711L24.7071 8.70711ZM-8.74228e-08 9L24 9L24 7L8.74228e-08 7L-8.74228e-08 9Z" fill="#1A1817"/>
+            <svg class="main-page__about-icon" viewBox="0 0 100 100">
+              <use xlink:href="./assets/images/sprite.svg#arrow-right"></use>
             </svg>
           </a>
         </div>
         <img class="lazy main-page__about-img" src="./assets/images/pixel.png" data-src="./assets/images/about/about-img.svg" alt="img">
       </div>
-      <div class="main-page__about-end"></div>
+      <div class="main-page__about-end">
+        @@include("blocks/about-grid/about-grid.html")
+      </div>
     </div>
   </section>
+  <section class="main-page__catalog">
+    @@include("blocks/splide-autoscroll/splide.html", {
+      "type": "catalog"
+    })
+    <div class="container">
+      <h2 class="title main-page__catalog-title">каталог</h2>
+      @@include("blocks/main-page/catalog-tabs/catalog-tabs.html")
+    </div>
+  </section>
+  @@include("blocks/application/application.html")
 </main>
