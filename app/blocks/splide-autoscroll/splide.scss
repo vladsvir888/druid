@@ -1,0 +1,9 @@
+.splide-marquee {
+  &__item {
+    margin: 0 8rem;
+
+    @media (max-width: $md) {
+      margin: 0 4rem;
+    }
+  }
+}

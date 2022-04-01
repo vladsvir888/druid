@@ -19,6 +19,7 @@ html {
 body {
   --text-color: #1a1817;
   --bgc-color: #fff;
+  --gray: #bbb;
 
   color: var(--text-color);
   background-color: var(--bgc-color);
@@ -80,4 +81,11 @@ img {
   margin: -1px;
 
   clip: rect(0 0 0 0);
+}
+
+.title {
+  @extend %text-40;
+  @extend %pb-4;
+  font-weight: 700;
+  text-transform: uppercase;
 }

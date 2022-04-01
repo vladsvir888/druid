@@ -1,5 +1,7 @@
-// app.yourScriptName.init();
+document.addEventListener('DOMContentLoaded', () => {
+  app.splide.init();
 
-new WOW().init();
+  new WOW().init();
 
-new LazyLoad();
+  new LazyLoad();
+});

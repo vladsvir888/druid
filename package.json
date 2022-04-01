@@ -103,6 +103,8 @@
     "stylelint-scss": "^3.19.0"
   },
   "dependencies": {
+    "@splidejs/splide": "^3.6.12",
+    "@splidejs/splide-extension-auto-scroll": "^0.3.7",
     "animate.css": "^4.1.1",
     "jquery": "^3.6.0",
     "jquery-validation": "^1.19.3",
