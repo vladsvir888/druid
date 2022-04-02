@@ -1,7 +1,7 @@
 app.splide = {
   name: 'Бегущая строка',
   init() {
-    const splides = document.querySelectorAll('.splide');
+    const splides = document.querySelectorAll('.splideMarquee');
 
     if (splides.length === 0) return;
 

@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   app.splide.init();
+  app.progressbarProjectsSlider.init();
+  app.sliderEarlier.init();
+  app.tabs.init();
+  app.darkTheme.init();
 
   new WOW().init();
 

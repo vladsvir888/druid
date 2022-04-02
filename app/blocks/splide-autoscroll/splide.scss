@@ -22,15 +22,45 @@
       width: 81.6rem;
       height: 9.8rem;
     }
+
+    &--projects {
+      width: 43.4rem;
+      height: 9.8rem;
+    }
+
+    &--blog {
+      width: 23.7rem;
+      height: 9.8rem;
+    }
   }
 }
 
 .splide {
+  &-about {
+    @extend %pb-4;
+  }
+
+  &-catalog {
+    @extend %pb-4;
+  }
+
   &-application {
-    margin-bottom: 7rem;
+    padding-bottom: 7rem;
+
+    @media (max-width: $md) {
+      padding-bottom: 4rem;
+    }
 
     @media (max-width: $sm) {
-      margin-bottom: 2.4rem;
+      padding-bottom: 2.4rem;
     }
+  }
+
+  &-projects {
+    @extend %pb-4;
+  }
+
+  &-blog {
+    @extend %pb-4;
   }
 }

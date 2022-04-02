@@ -6,11 +6,6 @@ $lg: 1024px;
 // font-family
 $font-family: 'Montserrat', sans-serif;
 
-// colors
-// $black: #1a1817;
-// $gray: #bbb;
-// $orange: #e09654;
-
 // @extends
 %cover {
   width: 100%;
@@ -83,16 +78,8 @@ $font-family: 'Montserrat', sans-serif;
   line-height: 4.9rem;
 
   @media (max-width: $sm) {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     line-height: 3.2rem;
-  }
-}
-
-%mt-4 {
-  margin-top: 4rem;
-
-  @media (max-width: $sm) {
-    margin-top: 1rem;
   }
 }
 
@@ -101,6 +88,14 @@ $font-family: 'Montserrat', sans-serif;
 
   @media (max-width: $sm) {
     padding-top: 2.4rem;
+  }
+}
+
+%pt-8 {
+  padding-top: 8rem;
+
+  @media (max-width: $sm) {
+    padding-top: 4rem;
   }
 }
 
@@ -117,6 +112,22 @@ $font-family: 'Montserrat', sans-serif;
 
   @media (max-width: $sm) {
     padding-bottom: 4rem;
+  }
+}
+
+%mt-4 {
+  margin-top: 4rem;
+
+  @media (max-width: $sm) {
+    margin-top: 1rem;
+  }
+}
+
+%mb-4 {
+  margin-bottom: 4rem;
+
+  @media (max-width: $sm) {
+    margin-bottom: 2rem;
   }
 }
 

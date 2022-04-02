@@ -3,6 +3,19 @@
 
   background: url('../../assets/images/application/application-bg.jpg') no-repeat 50% / cover;
 
+  &__title {
+    font-size: 3.2rem;
+    line-height: 3.9rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-bottom: 1.6rem;
+
+    @media (max-width: $sm) {
+      font-size: 2.4rem;
+      line-height: 2.9rem;
+    }
+  }
+
   &__inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -34,7 +47,7 @@
 
     > * {
       &:not(:last-child) {
-        margin-bottom: 3.2rem;
+        padding-bottom: 3.2rem;
       }
     }
   }
@@ -55,6 +68,7 @@
     position: absolute;
     top: 0;
     left: 0.5rem;
+    cursor: text;
 
     @extend %text-18;
 

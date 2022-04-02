@@ -34,13 +34,95 @@ body {
 body.dark-theme {
   --text-color: #fff;
   --bgc-color: #1a1817;
+  --black2: #333;
 
   color: var(--text-color);
   background-color: var(--bgc-color);
+
+  .arrow-link__icon {
+    fill: var(--text-color);
+  }
+
+  .about-grid__icon {
+    fill: var(--text-color);
+  }
+
+  .about-grid__item {
+    background-color: var(--black2);
+  }
+
+  .catalog-tabs__item-img {
+    &:hover {
+      .catalog-tabs__item-text {
+        background-color: var(--bgc-color);
+      }
+    }
+  }
+
+  .btn__where {
+    &:hover {
+      color: #fff;
+      border: 0.2rem solid #fff;
+      background-color: var(--bgc-color);
+    }
+  }
+
+  .btn__application {
+    color: #fff;
+    background-color: var(--bgc-color);
+    border: 0.2rem solid #fff;
+  }
+
+  .footer__developer-icon {
+    fill: #fff;
+  }
+
+  .socials__social-icon {
+    fill: #fff;
+  }
+
+  .application__info {
+    color: var(--bgc-color);
+  }
+
+  .application__form-text {
+    color: var(--bgc-color);
+  }
+
+  .application__form-placeholder {
+    color: var(--bgc-color);
+  }
+
+  .application__form-input {
+    border-bottom: 0.1rem solid var(--bgc-color);
+  }
+
+  .main-page__aside {
+    background: rgba(26, 24, 23, 0.6);
+  }
+
+  .main-page__callback-btn {
+    color: #fff;
+  }
+
+  .main-page__position-block {
+    background: linear-gradient(270deg, #1a1817 0%, rgba(26, 24, 23, 0) 100%);
+  }
+
+  .main-page__position-icon {
+    fill: #fff;
+  }
+
+  .main-page__logo {
+    path {
+      fill: #fff;
+    }
+  }
 }
 
 a {
   text-decoration: none;
+  color: var(--text-color);
 }
 
 .header {
@@ -107,10 +189,12 @@ input {
     padding: 1.6rem 4.5rem;
   }
 
+  // прозрачная кнопка
   &__where {
     display: block;
     width: 27rem;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     padding: 1.6rem 6rem;
     border: 0.2rem solid var(--text-color);
     color: var(--text-color);
@@ -139,6 +223,36 @@ input {
       color: var(--text-color);
       background-color: #fff;
       border: 0.2rem solid var(--text-color);
+    }
+
+    @media (max-width: $sm) {
+      padding: 1rem 3rem;
+    }
+  }
+}
+
+// кнопка со стрелкой
+.arrow-link {
+  display: inline-flex;
+  align-items: center;
+
+  @extend %text-18;
+  font-weight: 500;
+  color: var(--text-color);
+
+  &__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: transform 0.3s;
+  }
+
+  span {
+    padding-right: 1.6rem;
+  }
+
+  &:hover {
+    .arrow-link__icon {
+      transform: translateX(0.5rem);
     }
   }
 }

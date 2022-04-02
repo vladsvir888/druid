@@ -1,0 +1,54 @@
+.section-earlier {
+  @extend %pb-8;
+
+  &__title {
+    @extend %pt-8;
+
+    border-top: 0.2rem solid var(--gray);
+  }
+
+  &__slider {
+    margin-left: 26.2rem;
+
+    @media (max-width: $lg) {
+      margin-left: 0;
+      padding: 0 1.6rem;
+    }
+  }
+
+  &__slide {
+    > * {
+      &:not(:last-child) {
+        margin-bottom: 1.6rem;
+      }
+    }
+  }
+
+  &__link-wrap {
+    > * {
+      &:not(:last-child) {
+        margin-bottom: 1.6rem;
+      }
+    }
+  }
+
+  &__subtitle {
+    @extend %text-16;
+    font-weight: 700;
+  }
+
+  &__text {
+    @extend %text-24;
+    font-weight: 700;
+  }
+
+  picture {
+    display: block;
+  }
+
+  &__img {
+    width: 26.7rem;
+    height: 100%;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,111 @@
+.main-page {
+  &__progressbar-projects {
+    @extend %pb-4;
+
+    .swiper-pagination-progressbar {
+      background: var(--gray2);
+    }
+
+    .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+      background: var(--gray);
+    }
+
+    .swiper-horizontal > .swiper-pagination-progressbar,
+    .swiper-pagination-progressbar.swiper-pagination-horizontal,
+    .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,
+    .swiper-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+      height: 0.8rem;
+      left: 0;
+      top: unset;
+      bottom: 0;
+    }
+  }
+
+  &__progressbar-inner {
+    display: flex;
+  }
+
+  &__progressbar-project {
+    display: grid;
+    height: 45.6rem;
+
+    @media (max-width: $sm) {
+      height: 30rem;
+    }
+
+    &:nth-child(odd) {
+      width: 42rem !important;
+
+      @media (max-width: $lg) {
+        width: 50% !important;
+      }
+
+      @media (max-width: $md) {
+        width: 100% !important;
+      }
+    }
+
+    &:nth-child(even) {
+      width: 94rem !important;
+
+      @media (max-width: $lg) {
+        width: 50% !important;
+      }
+
+      @media (max-width: $md) {
+        width: 100% !important;
+      }
+
+      .main-page__progressbar-descr {
+        @media (max-width: $lg) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__progressbar-img-wrap {
+    grid-area: 1 / 2;
+  }
+
+  &__progressbar-img {
+    @extend %cover;
+  }
+
+  &__progressbar-content {
+    grid-area: 1 / 2;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 4rem 3rem 4rem 4.5rem;
+    max-width: 80rem;
+
+    @media (max-width: $lg) {
+      padding: 4rem 3rem 2rem 2rem;
+    }
+  }
+
+  &__progressbar-title {
+    @extend %text-40;
+    font-weight: 700;
+    margin-bottom: 1.6rem;
+    text-transform: uppercase;
+  }
+
+  &__progressbar-subtitle {
+    @extend %text-24;
+
+    &:not(:last-child) {
+      margin-bottom: 0.8rem;
+    }
+
+    @media (max-width: $lg) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__progressbar-descr {
+    @extend %text-16;
+  }
+}

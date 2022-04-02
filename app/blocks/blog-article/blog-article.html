@@ -1,0 +1,22 @@
+<article class="blog-article">
+  <picture>
+    <source srcset="./assets/images/pixel.png" data-srcset="@@webpImg" type="image/webp">
+    <img class="lazy blog-article__img" src="./assets/images/pixel.png" data-src="@@img">
+  </picture>
+  <div class="blog-article__content">
+    <div class="blog-article__content-header">
+      <h3 class="blog-article__title">@@title</h3>
+
+      @@if (isDate === true) {
+        <time class="blog-article__date" datetime="@@datetime">@@date</time>
+      }
+    </div>
+    <div class="blog-article__descr">@@descr</div>
+    <a class="arrow-link" href="#">
+      <span>Подробнее</span>
+      <svg class="arrow-link__icon" viewBox="0 0 100 100">
+        <use xlink:href="./assets/images/sprite.svg#arrow-right"></use>
+      </svg>
+    </a>
+  </div>
+</article>

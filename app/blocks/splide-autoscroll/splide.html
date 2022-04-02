@@ -1,5 +1,5 @@
 @@if (type === "about") {
-  <div class="splide splide-marquee splide-about">
+  <div class="splide splide-marquee splide-about splideMarquee">
     <div class="splide__track">
       <ul class="splide__list">
         <li class="splide__slide splide-marquee__item">
@@ -17,7 +17,7 @@
 }
 
 @@if (type === "catalog") {
-  <div class="splide splide-marquee">
+  <div class="splide splide-marquee splide-catalog splideMarquee">
     <div class="splide__track">
       <ul class="splide__list">
         <li class="splide__slide splide-marquee__item">
@@ -35,7 +35,7 @@
 }
 
 @@if (type === "application") {
-  <div class="splide splide-marquee splide-application">
+  <div class="splide splide-marquee splide-application splideMarquee">
     <div class="splide__track">
       <ul class="splide__list">
         <li class="splide__slide splide-marquee__item">
@@ -46,6 +46,42 @@
         </li>
         <li class="splide__slide splide-marquee__item">
           <img class="splide-marquee__img splide-marquee__img--application lazy" src="./assets/images/pixel.png" data-src="./assets/images/splide/application-splide-img.svg" alt="img">
+        </li>
+      </ul>
+    </div>
+  </div>
+}
+
+@@if (type === "projects") {
+  <div class="splide splide-marquee splide-projects splideMarquee">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide splide-marquee__item">
+          <img class="splide-marquee__img splide-marquee__img--projects lazy" src="./assets/images/pixel.png" data-src="./assets/images/splide/projects-splide-img.svg" alt="img">
+        </li>
+        <li class="splide__slide splide-marquee__item">
+          <img class="splide-marquee__img splide-marquee__img--projects lazy" src="./assets/images/pixel.png" data-src="./assets/images/splide/projects-splide-img.svg" alt="img">
+        </li>
+        <li class="splide__slide splide-marquee__item">
+          <img class="splide-marquee__img splide-marquee__img--projects lazy" src="./assets/images/pixel.png" data-src="./assets/images/splide/projects-splide-img.svg" alt="img">
+        </li>
+      </ul>
+    </div>
+  </div>
+}
+
+@@if (type === "blog") {
+  <div class="splide splide-marquee splide-blog splideMarquee">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide splide-marquee__item">
+          <img class="splide-marquee__img splide-marquee__img--blog lazy" src="./assets/images/pixel.png" data-src="./assets/images/splide/blog-splide-img.svg" alt="img">
+        </li>
+        <li class="splide__slide splide-marquee__item">
+          <img class="splide-marquee__img splide-marquee__img--blog lazy" src="./assets/images/pixel.png" data-src="./assets/images/splide/blog-splide-img.svg" alt="img">
+        </li>
+        <li class="splide__slide splide-marquee__item">
+          <img class="splide-marquee__img splide-marquee__img--blog lazy" src="./assets/images/pixel.png" data-src="./assets/images/splide/blog-splide-img.svg" alt="img">
         </li>
       </ul>
     </div>
