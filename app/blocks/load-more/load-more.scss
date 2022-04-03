@@ -1,0 +1,27 @@
+.load-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:not(:last-child) {
+    @extend %pb-4;
+  }
+
+  &__icon {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  &__btn {
+    @extend %text-14;
+    text-transform: uppercase;
+    font-weight: 400;
+    border: none;
+    background: transparent;
+    padding-left: 2.7rem;
+
+    @media (max-width: $sm) {
+      padding-left: 1.2rem;
+    }
+  }
+}

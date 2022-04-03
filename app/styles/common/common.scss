@@ -67,6 +67,12 @@ body.dark-theme {
     }
   }
 
+  .application__form-fields {
+    .btn__application {
+      border: 0.2rem solid transparent;
+    }
+  }
+
   .btn__application {
     color: #fff;
     background-color: var(--bgc-color);
@@ -118,6 +124,50 @@ body.dark-theme {
       fill: #fff;
     }
   }
+
+  .burger-menu {
+    background: var(--bgc-color);
+  }
+
+  .burger-menu__callback-btn {
+    color: #fff;
+  }
+
+  .burger-menu__close-icon {
+    fill: #fff;
+  }
+
+  .burger-menu__logo {
+    path {
+      fill: #fff;
+    }
+  }
+
+  .header {
+    background-color: var(--bgc-color);
+  }
+
+  .header__logo {
+    path {
+      fill: #fff;
+    }
+  }
+
+  .header__icon {
+    fill: #fff;
+  }
+
+  .load-more__btn {
+    color: #fff;
+  }
+
+  .load-more__icon {
+    fill: #fff;
+  }
+
+  .pagination__icon {
+    fill: #fff;
+  }
 }
 
 a {
@@ -132,6 +182,7 @@ a {
 .main {
   position: relative;
   flex: 1 0 auto; // Footer at bottom
+  padding-top: 9rem;
 }
 
 .footer {
@@ -254,5 +305,29 @@ input {
     .arrow-link__icon {
       transform: translateX(0.5rem);
     }
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.progress {
+  padding: 15rem 0 7.5rem;
+
+  &__ul {
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    gap: 2.4rem;
+
+    @media (max-width: $md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__link {
+    @extend %text-18;
+    font-weight: 700;
+    text-transform: uppercase;
   }
 }

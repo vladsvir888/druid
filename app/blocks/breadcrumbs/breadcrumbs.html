@@ -1,0 +1,11 @@
+@@if (isActive === true) {
+  <li class="breadcrumbs__item is-active">
+    @@text
+  </li>
+}
+
+@@if (isActive === false) {
+  <li class="breadcrumbs__item">
+    <a href="#" class="breadcrumbs__link">@@text</a>
+  </li>
+}

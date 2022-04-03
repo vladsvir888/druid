@@ -1,0 +1,43 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  &__numbers {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 2rem;
+  }
+
+  &__number {
+    padding: 1rem;
+    color: var(--gray);
+
+    @extend %text-14;
+  }
+
+  &__link {
+    color: var(--gray);
+  }
+
+  &__btn {
+    border: none;
+    background-color: transparent;
+  }
+
+  &__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+.pagination__link.is-active {
+  @extend %text-24;
+  color: var(--text-color);
+}

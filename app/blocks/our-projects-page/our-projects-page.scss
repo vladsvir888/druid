@@ -1,0 +1,48 @@
+.our-projects-page {
+  &__projects {
+    @extend %pb-8;
+  }
+
+  &__main-title {
+    text-align: center;
+  }
+
+  &__projects-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem 2.4rem;
+
+    @extend %pb-4;
+
+    @media (max-width: $sm) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  &__projects-img {
+    padding-bottom: 3.2rem;
+
+    @media (max-width: $sm) {
+      padding-bottom: 1.4rem;
+    }
+  }
+
+  &__projects-title {
+    @extend %text-40;
+    padding-bottom: 2.4rem;
+
+    @media (max-width: $sm) {
+      padding-bottom: 1.2rem;
+    }
+  }
+
+  &__projects-descr {
+    @extend %text-18;
+    padding-bottom: 1.6rem;
+  }
+
+  picture {
+    display: block;
+  }
+}

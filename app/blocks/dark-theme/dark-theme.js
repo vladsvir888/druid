@@ -3,6 +3,8 @@ app.darkTheme = {
   init() {
     const toggleThemeBtn = document.querySelector('.toggleThemeBtn');
 
+    if (toggleThemeBtn === null) return;
+
     toggleThemeBtn.addEventListener('click', () => {
       const useEl = toggleThemeBtn.querySelector('use');
       const attr = useEl.getAttribute('xlink:href');

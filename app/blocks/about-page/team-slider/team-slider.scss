@@ -1,0 +1,50 @@
+.about-page {
+  &__team-slider {
+    @extend %pb-4;
+
+    .swiper-pagination-progressbar {
+      background: var(--gray2);
+    }
+
+    .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+      background: var(--gray);
+    }
+
+    .swiper-horizontal > .swiper-pagination-progressbar,
+    .swiper-pagination-progressbar.swiper-pagination-horizontal,
+    .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,
+    .swiper-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+      height: 0.8rem;
+      left: 0;
+      top: unset;
+      bottom: 0;
+    }
+  }
+
+  &__team-slide {
+    > * {
+      &:not(:last-child) {
+        padding-bottom: 2.4rem;
+      }
+    }
+  }
+
+  &__team-title {
+    @extend %text-24;
+    font-weight: 700;
+  }
+
+  &__team-descr {
+    @extend %text-16;
+
+    font-weight: 400;
+  }
+
+  &__team-img {
+    @extend %cover;
+  }
+
+  picture {
+    display: block;
+  }
+}

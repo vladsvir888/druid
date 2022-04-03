@@ -25,7 +25,7 @@
   // position-block
   &__position-block {
     position: absolute;
-    padding: 3.2rem 1.6rem;
+    padding: 0 1.6rem;
     top: 0;
     right: 0;
     background: linear-gradient(270deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
@@ -33,14 +33,16 @@
     justify-content: flex-end;
     align-items: center;
     width: 96rem;
+    height: 8.8rem;
 
     @media (max-width: $lg) {
       width: 100%;
       justify-content: space-between;
+      z-index: 1000;
     }
 
     @media (max-width: $sm) {
-      padding: 1.3rem 1.6rem 2.1rem 1.6rem;
+      height: 5.6rem;
     }
   }
 
@@ -49,14 +51,6 @@
 
     @media (max-width: $lg) {
       display: block;
-    }
-  }
-
-  &__position-burger {
-    display: none;
-
-    @media (max-width: $lg) {
-      display: flex;
     }
   }
 
@@ -153,10 +147,9 @@
     grid-template-columns: max-content 1fr;
     gap: 4rem 13rem;
 
-    // @extend %mt-4;
     @extend %pt-4;
     @extend %pb-8;
-    border-top: 0.2rem solid var(--gray);
+    border-top: 0.1rem solid var(--gray);
 
     @media (max-width: $lg) {
       gap: 4rem 2rem;
@@ -229,9 +222,8 @@
 
   &__catalog-title {
     @extend %pt-4;
-    // @extend %mt-4;
     text-align: center;
-    border-top: 0.2rem solid var(--gray);
+    border-top: 0.1rem solid var(--gray);
   }
 
   // section-projects
@@ -255,10 +247,9 @@
       "img-2 content-2";
 
     @extend %pt-8;
-    // @extend %mt-4;
     @extend %pb-8;
 
-    border-top: 0.2rem solid var(--gray);
+    border-top: 0.1rem solid var(--gray);
 
     @media (max-width: $lg) {
       grid-template-rows: minmax(43rem, max-content) 6rem minmax(43rem, max-content);
@@ -315,8 +306,7 @@
 
   &__blog-title {
     @extend %pt-4;
-    // @extend %mt-4;
-    border-top: 0.2rem solid var(--gray);
+    border-top: 0.1rem solid var(--gray);
   }
 
   &__blog-wrap {
@@ -324,7 +314,6 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 2.4rem;
 
-    // @extend %mb-4;
     @extend %pb-4;
 
     @media (max-width: $lg) {

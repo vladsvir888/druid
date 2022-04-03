@@ -1,0 +1,32 @@
+.breadcrumbs {
+  @extend %text-16;
+
+  display: flex;
+  align-items: center;
+  padding: 1.6rem 0;
+  border-top: 0.1rem solid var(--gray);
+
+  > * {
+    &:not(:last-child) {
+      position: relative;
+      margin-right: 1rem;
+      padding-right: 1.5rem;
+
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: '-';
+        color: var(--gray);
+      }
+    }
+  }
+
+  &__link {
+    color: var(--gray);
+  }
+}
+
+.breadcrumbs__item.is-active {
+  color: var(--text-color);
+}

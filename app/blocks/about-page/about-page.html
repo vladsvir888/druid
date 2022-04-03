@@ -1,0 +1,84 @@
+<main class="about-page main">
+  @@include("blocks/splide-autoscroll/splide.html", {
+    "type": "aboutUs"
+  })
+  <div class="container">
+    <ul class="breadcrumbs">
+      @@loop("blocks/breadcrumbs/breadcrumbs.html", [
+        {
+          "text": "Главная",
+          "isActive": false,
+        },
+        {
+          "text": "О компании",
+          "isActive": true,
+        },
+      ])
+    </ul>
+    <section class="about-page__info">
+      <h2 class="title about-page__info-title">О компании</h2>
+      <div class="about-page__info-wrap">
+        <p>
+          Мебель премиум-класса создается нами более 20 лет на собственном производстве, где мы совмещаем лучшие итальянские традиции в отделке и современные технологии изготовления.
+        </p>
+        <p>
+          Наши изделия можно определить по нескольким критериям:
+        </p>
+        <ul>
+          <li>Высокий уровень изготовления</li>
+          <li>Качественные материалы и отделка</li>
+          <li>Авторский дизайн, любые возможные размеры и формы</li>
+        </ul>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam varius a velit vitae sollicitudin. Sed vitae risus est. Phasellus vulputate quam non diam condimentum vehicula. Duis feugiat orci egestas, interdum dolor vel, tincidunt augue. Morbi non magna nunc. Duis dapibus commodo ante at convallis. Fusce a odio eu est euismod congue vel ac arcu. Nullam sit amet tempus purus. Fusce volutpat congue nulla vitae interdum. Aenean eget pulvinar velit.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam varius a velit vitae sollicitudin. Sed vitae risus est. Phasellus vulputate quam non diam condimentum vehicula. Duis feugiat orci egestas, interdum dolor vel, tincidunt augue. Morbi non magna nunc. Duis dapibus commodo ante at convallis. Fusce a odio eu est euismod congue vel ac arcu. Nullam sit amet tempus purus. Fusce volutpat congue nulla vitae interdum. Aenean eget pulvinar velit.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam varius a velit vitae sollicitudin. Sed vitae risus est. Phasellus vulputate quam non diam condimentum vehicula. Duis feugiat orci egestas, interdum dolor vel, tincidunt augue. Morbi non magna nunc. Duis dapibus commodo ante at convallis. Fusce a odio eu est euismod congue vel ac arcu. Nullam sit amet tempus purus. Fusce volutpat congue nulla vitae interdum. Aenean eget pulvinar velit.
+        </p>
+      </div>
+      @@include("blocks/about-grid/about-grid.html")
+    </section>
+    <section class="about-page__team">
+      <h2 class="title about-page__team-title">Наша команда</h2>
+      @@include("blocks/about-page/team-slider/team-slider.html")
+    </section>
+  </div>
+  <section class="about-page__blog">
+    <div class="container">
+      <h2 class="title about-page__blog-title">Блог</h2>
+      <div class="about-page__blog-wrap">
+        @@loop("blocks/blog-article/blog-article.html", [
+          {
+            "img": "./assets/images/blog-article/1.jpg",
+            "webpImg": "./assets/images/blog-article/1.webp",
+            "descr": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+            "title": "Заголовок / название статьи 2 или 3 строки",
+            "isDate": true,
+            "date": "07.07.2021",
+            "datetime": "2021-07-07",
+          },
+          {
+            "img": "./assets/images/blog-article/2.jpg",
+            "webpImg": "./assets/images/blog-article/2.webp",
+            "descr": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+            "title": "Заголовок / название статьи 2 или 3 строки",
+            "isDate": false,
+          },
+          {
+            "img": "./assets/images/blog-article/3.jpg",
+            "webpImg": "./assets/images/blog-article/3.webp",
+            "descr": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+            "title": "Заголовок / название статьи 2 или 3 строки",
+            "isDate": false,
+          },
+        ])
+      </div>
+      <a href="#" class="btn btn__where">В блог</a>
+    </div>
+  </section>
+  @@include("blocks/application/application.html")
+  @@include("blocks/slider-earlier/earlier.html")
+</main>

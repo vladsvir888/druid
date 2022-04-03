@@ -1,1 +1,69 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 0 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8.8rem;
+  background-color: #fff;
+  border-bottom: 0.1rem solid var(--gray);
 
+  @media (max-width: $lg) {
+    .burger {
+      display: none;
+    }
+
+    .header-burger {
+      display: flex;
+    }
+  }
+
+  @media (max-width: $lg) {
+    z-index: 10000;
+  }
+
+  @media (max-width: $sm) {
+    height: 5.6rem;
+  }
+
+  &__logo {
+    width: 19.1rem;
+    height: 4.6rem;
+
+    @media (max-width: $sm) {
+      width: 9rem;
+      height: 2rem;
+    }
+  }
+
+  &__btn {
+    border: none;
+    background-color: transparent;
+  }
+
+  &__icons {
+    > * {
+      &:not(:last-child) {
+        padding-right: 3.2rem;
+
+        @media (max-width: $sm) {
+          padding-right: 1.6rem;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    width: 2.4rem;
+    height: 2.4rem;
+
+    @media (max-width: $sm) {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+.about-page {
+  &__info {
+    @extend %pb-8;
+  }
+
+  &__info-title {
+    text-align: center;
+  }
+
+  &__info-wrap {
+    @extend %text-18;
+
+    &:not(:last-child) {
+      padding-bottom: 6.4rem;
+    }
+
+    > * {
+      &:not(:last-child) {
+        padding-bottom: 2.4rem;
+      }
+    }
+
+    ul {
+      padding-left: 2.4rem;
+    }
+
+    li {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: -2.4rem;
+        transform: translateY(-50%);
+        width: 0.8rem;
+        height: 0.8rem;
+        border: 0.2rem solid var(--gray);
+        content: '';
+      }
+    }
+  }
+
+  &__team {
+    @extend %pb-8;
+  }
+
+  &__blog {
+    @extend %pb-8;
+  }
+
+  &__blog-title {
+    @extend %pt-4;
+    border-top: 0.1rem solid var(--gray);
+  }
+
+  &__blog-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.4rem;
+
+    @extend %pb-4;
+
+    @media (max-width: $lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $md) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

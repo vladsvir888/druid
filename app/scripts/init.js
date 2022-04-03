@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
   app.sliderEarlier.init();
   app.tabs.init();
   app.darkTheme.init();
+  app.burgerMenu.init();
+  app.progressbarTeam.init();
 
   new WOW().init();
 

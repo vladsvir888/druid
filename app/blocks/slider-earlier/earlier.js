@@ -15,7 +15,6 @@ app.sliderEarlier = {
         },
         768: {
           slidesPerView: 3,
-          spaceBetween: 16,
         },
         1025: {
           slidesPerView: 6,
