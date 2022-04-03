@@ -22,9 +22,13 @@ body {
   --gray: #bbb;
   --gray2: #f2f2f2;
   --orange: #e09654;
+  --aside-bgc: rgba(255, 255, 255, 0.6);
+  --position-block-bgc: linear-gradient(270deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+  --burger-menu-bgc: rgba(255, 255, 255, 0.6);
 
   color: var(--text-color);
   background-color: var(--bgc-color);
+
   display: flex; // Footer at bottom
   flex-direction: column; // Footer at bottom
   height: 100%; // Footer at bottom
@@ -34,22 +38,13 @@ body {
 body.dark-theme {
   --text-color: #fff;
   --bgc-color: #1a1817;
-  --black2: #333;
+  --gray2: #333;
+  --aside-bgc: rgba(26, 24, 23, 0.6);
+  --position-block-bgc: linear-gradient(270deg, #1a1817 0%, rgba(26, 24, 23, 0) 100%);
+  --burger-menu-bgc: rgba(0, 0, 0, 0.6);
 
   color: var(--text-color);
   background-color: var(--bgc-color);
-
-  .arrow-link__icon {
-    fill: var(--text-color);
-  }
-
-  .about-grid__icon {
-    fill: var(--text-color);
-  }
-
-  .about-grid__item {
-    background-color: var(--black2);
-  }
 
   .catalog-tabs__item-img {
     &:hover {
@@ -61,112 +56,16 @@ body.dark-theme {
 
   .btn__where {
     &:hover {
-      color: #fff;
-      border: 0.2rem solid #fff;
+      color: var(--text-color);
+      border: 0.2rem solid var(--text-color);
       background-color: var(--bgc-color);
     }
   }
 
-  .application__form-fields {
-    .btn__application {
-      border: 0.2rem solid transparent;
-    }
-  }
-
   .btn__application {
-    color: #fff;
+    color: var(--text-color);
     background-color: var(--bgc-color);
-    border: 0.2rem solid #fff;
-  }
-
-  .footer__developer-icon {
-    fill: #fff;
-  }
-
-  .socials__social-icon {
-    fill: #fff;
-  }
-
-  .application__info {
-    color: var(--bgc-color);
-  }
-
-  .application__form-text {
-    color: var(--bgc-color);
-  }
-
-  .application__form-placeholder {
-    color: var(--bgc-color);
-  }
-
-  .application__form-input {
-    border-bottom: 0.1rem solid var(--bgc-color);
-  }
-
-  .main-page__aside {
-    background: rgba(26, 24, 23, 0.6);
-  }
-
-  .main-page__callback-btn {
-    color: #fff;
-  }
-
-  .main-page__position-block {
-    background: linear-gradient(270deg, #1a1817 0%, rgba(26, 24, 23, 0) 100%);
-  }
-
-  .main-page__position-icon {
-    fill: #fff;
-  }
-
-  .main-page__logo {
-    path {
-      fill: #fff;
-    }
-  }
-
-  .burger-menu {
-    background: var(--bgc-color);
-  }
-
-  .burger-menu__callback-btn {
-    color: #fff;
-  }
-
-  .burger-menu__close-icon {
-    fill: #fff;
-  }
-
-  .burger-menu__logo {
-    path {
-      fill: #fff;
-    }
-  }
-
-  .header {
-    background-color: var(--bgc-color);
-  }
-
-  .header__logo {
-    path {
-      fill: #fff;
-    }
-  }
-
-  .header__icon {
-    fill: #fff;
-  }
-
-  .load-more__btn {
-    color: #fff;
-  }
-
-  .load-more__icon {
-    fill: #fff;
-  }
-
-  .pagination__icon {
-    fill: #fff;
+    border: 0.2rem solid var(--text-color);
   }
 }
 
@@ -174,6 +73,13 @@ a {
   text-decoration: none;
   color: var(--text-color);
 }
+
+// picture {
+//   display: block;
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+// }
 
 .header {
   flex-shrink: 0; // Footer at bottom
@@ -249,7 +155,7 @@ input {
     padding: 1.6rem 6rem;
     border: 0.2rem solid var(--text-color);
     color: var(--text-color);
-    transition: background-color 0.5s, color 0.5s, border 0.5s;
+    transition: all 0.5s;
 
     &:hover {
       color: #fff;
@@ -268,7 +174,7 @@ input {
     background-color: var(--text-color);
     color: #fff;
     border: 0.2rem solid transparent;
-    transition: all 0.3s;
+    transition: all 0.5s;
 
     &:hover {
       color: var(--text-color);
@@ -295,6 +201,7 @@ input {
     width: 2.5rem;
     height: 2.5rem;
     transition: transform 0.3s;
+    fill: var(--text-color);
   }
 
   span {
@@ -315,6 +222,10 @@ input {
 .progress {
   padding: 15rem 0 7.5rem;
 
+  @media (max-width: $sm) {
+    padding: 12rem 0 4rem;
+  }
+
   &__ul {
     display: grid;
     grid-template-columns: repeat(4, max-content);
@@ -322,6 +233,10 @@ input {
 
     @media (max-width: $md) {
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $sm) {
+      grid-template-columns: 1fr;
     }
   }
 

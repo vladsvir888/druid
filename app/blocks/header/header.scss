@@ -9,7 +9,7 @@
   justify-content: space-between;
   align-items: center;
   height: 8.8rem;
-  background-color: #fff;
+  background-color: var(--bgc-color);
   border-bottom: 0.1rem solid var(--gray);
 
   @media (max-width: $lg) {
@@ -33,6 +33,10 @@
   &__logo {
     width: 19.1rem;
     height: 4.6rem;
+
+    path {
+      fill: var(--text-color);
+    }
 
     @media (max-width: $sm) {
       width: 9rem;
@@ -60,6 +64,7 @@
   &__icon {
     width: 2.4rem;
     height: 2.4rem;
+    fill: var(--text-color);
 
     @media (max-width: $sm) {
       width: 1.6rem;

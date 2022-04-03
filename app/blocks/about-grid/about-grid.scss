@@ -24,6 +24,7 @@
     height: 6.4rem;
     flex-shrink: 0;
     margin-right: 3.2rem;
+    fill: var(--text-color);
 
     @media (max-width: $lg) {
       margin-right: 2.2rem;

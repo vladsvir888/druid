@@ -6,8 +6,13 @@ app.progressbarProjectsSlider = {
     if (progressbarProjectsSlider === null) return;
 
     new Swiper(progressbarProjectsSlider, {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 24,
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+      },
       grabCursor: true,
       loop: true,
       pagination: {

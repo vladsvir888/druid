@@ -10,6 +10,7 @@
   &__icon {
     width: 5rem;
     height: 5rem;
+    fill: var(--text-color);
   }
 
   &__btn {
@@ -19,6 +20,7 @@
     border: none;
     background: transparent;
     padding-left: 2.7rem;
+    color: var(--text-color);
 
     @media (max-width: $sm) {
       padding-left: 1.2rem;

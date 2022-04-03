@@ -34,34 +34,46 @@
     }
 
     &:nth-child(odd) {
-      width: 42rem !important;
-
-      @media (max-width: $lg) {
-        width: 50% !important;
-      }
-
-      @media (max-width: $md) {
-        width: 100% !important;
+      @media (min-width: 1025px) {
+        width: 42rem !important;
       }
     }
 
     &:nth-child(even) {
-      width: 94rem !important;
-
-      @media (max-width: $lg) {
-        width: 50% !important;
-      }
-
-      @media (max-width: $md) {
-        width: 100% !important;
-      }
-
-      .main-page__progressbar-descr {
-        @media (max-width: $lg) {
-          display: none;
-        }
+      @media (min-width: 1025px) {
+        width: 94rem !important;
       }
     }
+
+    // &:nth-child(odd) {
+    //   width: 42rem !important;
+
+    //   @media (max-width: $lg) {
+    //     width: 50% !important;
+    //   }
+
+    //   @media (max-width: $md) {
+    //     width: 100% !important;
+    //   }
+    // }
+
+    // &:nth-child(even) {
+    //   width: 94rem !important;
+
+    //   @media (max-width: $lg) {
+    //     width: 50% !important;
+    //   }
+
+    //   @media (max-width: $md) {
+    //     width: 100% !important;
+    //   }
+
+    //   .main-page__progressbar-descr {
+    //     @media (max-width: $lg) {
+    //       display: none;
+    //     }
+    //   }
+    // }
   }
 
   &__progressbar-img-wrap {
@@ -107,5 +119,11 @@
 
   &__progressbar-descr {
     @extend %text-16;
+
+    &--hidden {
+      @media (max-width: $lg) {
+        display: none;
+      }
+    }
   }
 }

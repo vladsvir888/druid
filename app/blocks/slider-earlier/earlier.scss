@@ -42,13 +42,13 @@
     font-weight: 700;
   }
 
-  picture {
-    display: block;
-  }
-
   &__img {
     width: 26.7rem;
     height: 100%;
     object-fit: cover;
+  }
+
+  picture {
+    display: block;
   }
 }

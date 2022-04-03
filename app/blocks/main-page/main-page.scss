@@ -20,6 +20,10 @@
       width: 9rem;
       height: 2rem;
     }
+
+    path {
+      fill: var(--text-color);
+    }
   }
 
   // position-block
@@ -28,7 +32,7 @@
     padding: 0 1.6rem;
     top: 0;
     right: 0;
-    background: linear-gradient(270deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+    background: var(--position-block-bgc);
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -74,6 +78,7 @@
   &__position-icon {
     width: 2.4rem;
     height: 2.4rem;
+    fill: var(--text-color);
 
     @media (max-width: $sm) {
       width: 1.6rem;
@@ -92,7 +97,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 2.4rem 4rem 7.6rem 4rem;
-    background: rgba(255, 255, 255, 0.6);
+    background: var(--aside-bgc);
 
     @media (max-width: $lg) {
       display: none;
@@ -135,6 +140,7 @@
     @extend %text-16;
     font-weight: 700;
     text-transform: uppercase;
+    color: var(--text-color);
   }
 
   // section-about
