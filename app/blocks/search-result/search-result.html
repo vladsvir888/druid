@@ -1,0 +1,76 @@
+<main class="search-result main">
+  @@include("blocks/splide-autoscroll/splide.html", {
+    "type": "search"
+  })
+  <div class="container">
+    <ul class="breadcrumbs">
+      @@loop("blocks/breadcrumbs/breadcrumbs.html", [
+        {
+          "text": "Главная",
+          "isActive": false,
+        },
+        {
+          "text": "Поиск",
+          "isActive": true,
+        },
+      ])
+    </ul>
+    <section class="search-result__result-block">
+      <h2 class="title">Поиск по сайту</h2>
+      <form class="search-result__form">
+        <div class="search-result__start">
+          <input class="search-result__form-input" type="text" value="Двери">
+          <div class="search-result__select">
+            <div class="search-result__select-btn" data-type="">
+              <span>Везде</span>
+              <svg class="search-result__arrow" viewBox="0 0 100 100">
+                <use xlink:href="./assets/images/sprite.svg#arrow-select"></use>
+              </svg>
+            </div>
+            <div class="search-result__select-dropdown">
+              <div class="search-result__select-option" data-type="На главной">На главной</div>
+              <div class="search-result__select-option" data-type="В каталоге">В каталоге</div>
+              <div class="search-result__select-option" data-type="В блоге">В блоге</div>
+              <div class="search-result__select-option" data-type="В избранных">В избранных</div>
+            </div>
+          </div>
+          <button class="search-result__form-btn" type="submit">Найти</button>
+        </div>
+        <div class="search-result__center">
+          <a href="#" class="search-result__center-item">
+            <div class="search-result__center-title"><span class="search-result__keyword">Двери</span> из массива</div>
+            <div class="search-result__center-descr">
+              Шпонированные <span class="search-result__keyword">двери</span> в последнее время пользуются большой популярностью среди покупателей. Причина этого кроется в наличии у данных <span class="search-result__keyword">двери</span> ...
+            </div>
+            <div class="search-result__center-path">
+              <span>Путь: </span>
+              <span>Главная - Каталог</span>
+            </div>
+          </a>
+          <a href="#" class="search-result__center-item">
+            <div class="search-result__center-title">Дуб щитовые циклон</div>
+            <div class="search-result__center-descr">
+              Шпонированные <span class="search-result__keyword">двери</span> в последнее время пользуются большой популярностью среди покупателей.
+            </div>
+            <div class="search-result__center-path">
+              <span>Путь: </span>
+              <span>Главная - Каталог</span>
+            </div>
+          </a>
+          <a href="#" class="search-result__center-item">
+            <div class="search-result__center-title"><span class="search-result__keyword">Двери</span> из массива</div>
+            <div class="search-result__center-descr">Шпонированные <span class="search-result__keyword">двери</span> в последнее время пользуются большой популярностью среди покупателей. Причина этого кроется в наличии у данных <span class="search-result__keyword">двери</span> ...</div>
+            <div class="search-result__center-path">
+              <span>Путь: </span>
+              <span>Главная - Каталог</span>
+            </div>
+          </a>
+        </div>
+        <div class="search-result__end">
+          @@include("blocks/pagination/pagination.html")
+        </div>
+      </form>
+    </section>
+  </div>
+</main>
+

@@ -49,6 +49,10 @@
     &--favourites {
       width: 54.8rem;
     }
+
+    &--search {
+      width: 38.5rem;
+    }
   }
 }
 
@@ -98,6 +102,10 @@
   }
 
   &-favourites {
+    @extend %pb-4;
+  }
+
+  &-search {
     @extend %pb-4;
   }
 }

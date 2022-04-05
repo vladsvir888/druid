@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
   app.form.init();
   app.map.init();
   app.favourite.init();
+  app.search.init();
+  app.select.init();
 
   new WOW().init();
 
