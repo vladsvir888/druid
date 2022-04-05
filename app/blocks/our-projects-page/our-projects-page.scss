@@ -21,6 +21,8 @@
   }
 
   &__projects-img {
+    width: 100%;
+    object-fit: cover;
     padding-bottom: 3.2rem;
 
     @media (max-width: $sm) {

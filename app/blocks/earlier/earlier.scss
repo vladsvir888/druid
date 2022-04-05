@@ -17,6 +17,8 @@
   }
 
   &__slide {
+    position: relative;
+
     > * {
       &:not(:last-child) {
         margin-bottom: 1.6rem;
@@ -46,6 +48,10 @@
     width: 26.7rem;
     height: 100%;
     object-fit: cover;
+
+    @media (max-width: $sm) {
+      width: 100%;
+    }
   }
 
   picture {

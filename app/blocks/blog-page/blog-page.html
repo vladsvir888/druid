@@ -1,0 +1,101 @@
+<main class="blog-page main">
+  @@include("blocks/splide-autoscroll/splide.html", {
+    "type": "blog"
+  })
+  <div class="container">
+    <ul class="breadcrumbs">
+      @@loop("blocks/breadcrumbs/breadcrumbs.html", [
+        {
+          "text": "Главная",
+          "isActive": false,
+        },
+        {
+          "text": "Блог",
+          "isActive": true,
+        },
+      ])
+    </ul>
+    <section class="blog-page__articles">
+      <h2 class="title blog-page__articles-title">Блог</h2>
+      <div class="blog-page__articles-wrap">
+        @@loop("blocks/blog-article/blog-article.html", [
+          {
+            "img": "./assets/images/blog-article/1.jpg",
+            "webpImg": "./assets/images/blog-article/1.webp",
+            "descr": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+            "title": "Заголовок / название статьи 2 или 3 строки",
+            "isDate": true,
+            "date": "07.07.2021",
+            "datetime": "2021-07-07",
+          },
+          {
+            "img": "./assets/images/blog-article/2.jpg",
+            "webpImg": "./assets/images/blog-article/2.webp",
+            "descr": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+            "title": "Заголовок / название статьи 2 или 3 строки",
+            "isDate": false,
+          },
+          {
+            "img": "./assets/images/blog-article/3.jpg",
+            "webpImg": "./assets/images/blog-article/3.webp",
+            "descr": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+            "title": "Заголовок / название статьи 2 или 3 строки",
+            "isDate": false,
+          },
+          {
+            "img": "./assets/images/blog-article/1.jpg",
+            "webpImg": "./assets/images/blog-article/1.webp",
+            "descr": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+            "title": "Заголовок / название статьи 2 или 3 строки",
+            "isDate": true,
+            "date": "07.07.2021",
+            "datetime": "2021-07-07",
+          },
+          {
+            "img": "./assets/images/blog-article/2.jpg",
+            "webpImg": "./assets/images/blog-article/2.webp",
+            "descr": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+            "title": "Заголовок / название статьи 2 или 3 строки",
+            "isDate": false,
+          },
+          {
+            "img": "./assets/images/blog-article/3.jpg",
+            "webpImg": "./assets/images/blog-article/3.webp",
+            "descr": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+            "title": "Заголовок / название статьи 2 или 3 строки",
+            "isDate": false,
+          },
+          {
+            "img": "./assets/images/blog-article/1.jpg",
+            "webpImg": "./assets/images/blog-article/1.webp",
+            "descr": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+            "title": "Заголовок / название статьи 2 или 3 строки",
+            "isDate": true,
+            "date": "07.07.2021",
+            "datetime": "2021-07-07",
+          },
+          {
+            "img": "./assets/images/blog-article/2.jpg",
+            "webpImg": "./assets/images/blog-article/2.webp",
+            "descr": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+            "title": "Заголовок / название статьи 2 или 3 строки",
+            "isDate": false,
+          },
+          {
+            "img": "./assets/images/blog-article/3.jpg",
+            "webpImg": "./assets/images/blog-article/3.webp",
+            "descr": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+            "title": "Заголовок / название статьи 2 или 3 строки",
+            "isDate": false,
+          },
+        ])
+      </div>
+      @@include("blocks/load-more/load-more.html", {
+        "text": "Показать еще 9 новостей"
+      })
+      @@include("blocks/pagination/pagination.html")
+    </section>
+  </div>
+  @@include("blocks/application/application.html")
+  @@include("blocks/earlier/earlier.html")
+</main>

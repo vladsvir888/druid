@@ -1,0 +1,37 @@
+<main class="contacts-page main">
+  @@include("blocks/splide-autoscroll/splide.html", {
+    "type": "contacts"
+  })
+  <div class="container">
+    <ul class="breadcrumbs">
+      @@loop("blocks/breadcrumbs/breadcrumbs.html", [
+        {
+          "text": "Главная",
+          "isActive": false,
+        },
+        {
+          "text": "Контакты",
+          "isActive": true,
+        },
+      ])
+    </ul>
+    <section class="contacts-page__info">
+      <h2 class="title contacts-page__title">контакты</h2>
+      <div class="contacts-page__info-wrap">
+        @@include("blocks/contacts-info/contacts-info.html")
+        <div class="contacts-page__form-block">
+          <div class="contacts-page__form-title">Оставьте заявку на консультацию</div>
+          <div class="contacts-page__form-descr">
+            Связываясь с нами Вы получите неповторимый результат.
+            Мы свяжемся с Вами для обсуждения деталей Вашего заказа
+          </div>
+          @@include("blocks/form/form.html", {
+            "isAgree": true,
+            "width": "smaller",
+          })
+        </div>
+      </div>
+    </section>
+  </div>
+  @@include("blocks/map/map.html")
+</main>

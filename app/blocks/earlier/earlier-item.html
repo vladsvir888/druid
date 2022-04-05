@@ -1,0 +1,26 @@
+<div class="@@if(!elementClass){section-earlier__slide}@@if(elementClass){section-earlier__slide @@elementClass}">
+  <picture>
+    <source srcset="./assets/images/pixel.png" data-srcset="@@webpImg" type="image/webp">
+    <img class="lazy section-earlier__img" src="./assets/images/pixel.png" data-src="@@jpgImg">
+  </picture>
+  <a class="section-earlier__link-wrap" href="#">
+    <h3 class="section-earlier__subtitle">@@title</h3>
+    <div class="section-earlier__text">@@price</div>
+  </a>
+
+  @@if (closeBtn === true) {
+    <button class="favourite-btn">
+      <svg class="favourite-btn__close-icon" viewBox="0 0 100 100">
+        <use xlink:href="./assets/images/sprite.svg#close-btn"></use>
+      </svg>
+    </button>
+  }
+
+  @@if (likeBtn === true) {
+    <button class="favourite-btn">
+      <svg class="favourite-btn__heart-icon" viewBox="0 0 100 100">
+        <use xlink:href="./assets/images/sprite.svg#heart"></use>
+      </svg>
+    </button>
+  }
+</div>

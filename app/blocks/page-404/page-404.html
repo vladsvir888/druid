@@ -1,0 +1,37 @@
+<main class="page-404 main">
+  @@include("blocks/splide-autoscroll/splide.html", {
+    "type": "mistake"
+  })
+  <div class="container">
+    <ul class="breadcrumbs">
+      @@loop("blocks/breadcrumbs/breadcrumbs.html", [
+        {
+          "text": "Главная",
+          "isActive": false,
+        },
+        {
+          "text": "Ошибка",
+          "isActive": true,
+        },
+      ])
+    </ul>
+    <section class="page-404__content">
+      <h2 class="title page-404__title">Страница не найдена</h2>
+      <div class="page-404__wrap">
+        <picture>
+          <source srcset="./assets/images/pixel.png" data-srcset="./assets/images/404/404-img.webp" type="image/webp">
+          <img class="lazy page-404__img" src="./assets/images/pixel.png" data-src="./assets/images/404/404-img.jpg">
+        </picture>
+        <p class="page-404__text">
+          К сожалению, запрашиваемая вами страница не существует. Пожалуйста, перейдите на главную страницу.
+        </p>
+        <a class="arrow-back" href="#">
+          <svg class="arrow-back__icon" viewBox="0 0 100 100">
+            <use xlink:href="./assets/images/sprite.svg#arrow-left"></use>
+          </svg>
+          <span>на главную</span>
+        </a>
+      </div>
+    </section>
+  </div>
+</main>

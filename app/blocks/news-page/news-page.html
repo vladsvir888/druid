@@ -1,0 +1,68 @@
+<main class="news-page main">
+  @@include("blocks/splide-autoscroll/splide.html", {
+    "type": "blog"
+  })
+  <div class="container">
+    <ul class="breadcrumbs">
+      @@loop("blocks/breadcrumbs/breadcrumbs.html", [
+        {
+          "text": "Главная",
+          "isActive": false,
+        },
+        {
+          "text": "Блог",
+          "isActive": false,
+        },
+        {
+          "text": "Новость",
+          "isActive": true,
+        },
+      ])
+    </ul>
+    <section class="news-page__content-block">
+      <h2 class="title news-page__title">Новость / заголовок</h2>
+      <div class="news-page__content-wrap">
+        <picture>
+          <source srcset="./assets/images/pixel.png" data-srcset="./assets/images/news-page/1.webp" type="image/webp">
+          <img class="lazy news-page__main-img" src="./assets/images/pixel.png" data-src="./assets/images/news-page/1.jpg">
+        </picture>
+        <p>
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam varius a velit vitae sollicitudin. Sed vitae risus est. Phasellus vulputate quam non diam condimentum vehicula. Duis feugiat orci egestas, interdum dolor vel, tincidunt augue. Morbi non magna nunc. Duis dapibus commodo ante at convallis. Fusce a odio eu est euismod congue vel ac arcu. Nullam sit amet tempus purus. Fusce volutpat congue nulla vitae interdum. Aenean eget pulvinar velit.
+        </p>
+        <p>
+          Vestibulum at libero augue. Sed vitae rutrum massa. Aliquam quis elit sem. Suspendisse urna orci, pellentesque vitae ultrices vitae, tempus non dolor. In at sapien nec nunc auctor porta sit amet nec dolor. Nunc a pellentesque erat. Nam non sapien ultricies velit fringilla maximus. Vestibulum tincidunt est ut odio ornare, sit amet iaculis ipsum sodales. Morbi auctor a eros non commodo. Integer quis aliquam nulla, nec iaculis nibh.
+        </p>
+        <p>
+          Donec vel quam lorem. Integer cursus nec elit eget dignissim. Etiam quis neque nec risus mollis vestibulum id rutrum sapien. Donec sodales id arcu eget auctor. Phasellus non consectetur quam. Fusce non eros ut purus vehicula congue. Morbi in venenatis sem. Etiam libero nulla, lacinia sed posuere vel, placerat ut felis. Ut mattis porta ipsum, in sodales purus consectetur eu. Mauris ante velit, tempus quis molestie sit amet, placerat sed ante. Vivamus rutrum viverra enim, et molestie risus malesuada vitae. Vestibulum vel aliquet metus. Morbi ut ultrices velit, sed accumsan massa.
+        </p>
+        <p>
+          Sed mattis dolor enim, eget ornare velit interdum non. Proin sollicitudin consequat dolor vitae feugiat. Ut at fermentum urna, eu fringilla magna. Maecenas pellentesque consectetur dignissim. Vestibulum tellus libero, rutrum pellentesque urna sit amet, dictum ullamcorper elit. Vestibulum commodo odio massa, eu consectetur risus accumsan ut. Cras nisl elit, egestas eu magna in, commodo semper ex. Proin sollicitudin sem eu nulla vulputate, vitae efficitur libero fermentum. Maecenas tristique sapien in vulputate porttitor. Nunc ornare, risus lobortis rhoncus commodo, massa nulla malesuada mauris, non fermentum orci mi quis est.
+        </p>
+        <p>
+          Quisque rhoncus lacinia nunc, nec pharetra metus vulputate ac. Mauris ultricies mauris eu ex pharetra, sit amet ultricies erat pharetra. Mauris a porta magna. Mauris elementum consectetur erat vel facilisis. Aliquam erat volutpat. Sed id arcu sed ex volutpat elementum. Suspendisse molestie, orci nec eleifend tincidunt, diam lorem dictum urna, vitae mollis odio sapien at nisi. Vivamus ac commodo tortor, sit amet facilisis ipsum. Pellentesque tempus sollicitudin purus, quis porttitor nisi facilisis ac. Pellentesque iaculis erat feugiat, sagittis lectus ac, fringilla velit. Donec a sem ac nisl consequat ullamcorper sed nec ipsum. Nulla elementum risus ac leo egestas venenatis. Sed sit amet scelerisque nisi. Sed quis nunc consectetur ipsum pellentesque convallis. Phasellus quis quam nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        </p>
+        <div class="news-page__img-wrap">
+          <picture>
+            <source srcset="./assets/images/pixel.png" data-srcset="./assets/images/news-page/1.webp" type="image/webp">
+            <img class="lazy news-page__img" src="./assets/images/pixel.png" data-src="./assets/images/news-page/1.jpg">
+          </picture>
+          <picture>
+            <source srcset="./assets/images/pixel.png" data-srcset="./assets/images/news-page/1.webp" type="image/webp">
+            <img class="lazy news-page__img" src="./assets/images/pixel.png" data-src="./assets/images/news-page/1.jpg">
+          </picture>
+        </div>
+      </div>
+      <a class="arrow-back" href="#">
+        <svg class="arrow-back__icon" viewBox="0 0 100 100">
+          <use xlink:href="./assets/images/sprite.svg#arrow-left"></use>
+        </svg>
+        <span>весь блог</span>
+      </a>
+    </section>
+  </div>
+  @@include("blocks/application/application.html")
+  @@include("blocks/earlier/earlier.html")
+</main>

@@ -1,0 +1,107 @@
+<main class="favourite-page main">
+  @@include("blocks/splide-autoscroll/splide.html", {
+    "type": "favourites"
+  })
+  <div class="container">
+    <ul class="breadcrumbs">
+      @@loop("blocks/breadcrumbs/breadcrumbs.html", [
+        {
+          "text": "Главная",
+          "isActive": false,
+        },
+        {
+          "text": "Каталог",
+          "isActive": false,
+        },
+        {
+          "text": "Мебель",
+          "isActive": false,
+        },
+        {
+          "text": "Избранное",
+          "isActive": true,
+        },
+      ])
+    </ul>
+    <section class="favourite-page__favourite-block">
+      <h2 class="title">Избранное</h2>
+      <div class="favourite-page__inner section-earlier">
+        @@loop("blocks/earlier/earlier-item.html", [
+          {
+            "title": "Доска для подачи блюд",
+            "price": "40 BYN",
+            "jpgImg": "./assets/images/earlier/1.jpg",
+            "webpImg": "./assets/images/earlier/1.webp",
+            "elementClass": "",
+            "closeBtn": true,
+            "likeBtn": false,
+          },
+          {
+            "title": "Доска для подачи блюд",
+            "price": "48 BYN",
+            "jpgImg": "./assets/images/earlier/2.jpg",
+            "webpImg": "./assets/images/earlier/2.webp",
+            "elementClass": "",
+            "closeBtn": true,
+            "likeBtn": false,
+          },
+          {
+            "title": "Двери дуб Нео",
+            "price": "120 BYN",
+            "jpgImg": "./assets/images/earlier/3.jpg",
+            "webpImg": "./assets/images/earlier/3.webp",
+            "elementClass": "",
+            "closeBtn": true,
+            "likeBtn": false,
+          },
+          {
+            "title": "Двери дуб Нео",
+            "price": "140 BYN",
+            "jpgImg": "./assets/images/earlier/3.jpg",
+            "webpImg": "./assets/images/earlier/3.webp",
+            "elementClass": "",
+            "closeBtn": true,
+            "likeBtn": false,
+          },
+          {
+            "title": "Доска для подачи блюд",
+            "price": "55 BYN",
+            "jpgImg": "./assets/images/earlier/2.jpg",
+            "webpImg": "./assets/images/earlier/2.webp",
+            "elementClass": "",
+            "closeBtn": true,
+            "likeBtn": false,
+          },
+          {
+            "title": "Двери дуб Нео",
+            "price": "165 BYN",
+            "jpgImg": "./assets/images/earlier/3.jpg",
+            "webpImg": "./assets/images/earlier/3.webp",
+            "elementClass": "",
+            "closeBtn": true,
+            "likeBtn": false,
+          },
+          {
+            "title": "Доска для подачи блюд",
+            "price": "70 BYN",
+            "jpgImg": "./assets/images/earlier/2.jpg",
+            "webpImg": "./assets/images/earlier/2.webp",
+            "elementClass": "",
+            "closeBtn": true,
+            "likeBtn": false,
+          },
+          {
+            "title": "Двери дуб Нео",
+            "price": "135 BYN",
+            "jpgImg": "./assets/images/earlier/3.jpg",
+            "webpImg": "./assets/images/earlier/3.webp",
+            "elementClass": "",
+            "closeBtn": true,
+            "likeBtn": false,
+          },
+        ])
+      </div>
+    </section>
+  </div>
+  @@include("blocks/earlier/earlier.html")
+</main>

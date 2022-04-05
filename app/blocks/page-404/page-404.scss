@@ -1,0 +1,45 @@
+.page-404 {
+  &__content {
+    @extend %pb-8;
+  }
+
+  &__title {
+    text-align: center;
+    padding-bottom: 11.3rem;
+
+    @media (max-width: $lg) {
+      padding-bottom: 4rem;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    > * {
+      &:not(:last-child) {
+        padding-bottom: 6rem;
+
+        @media (max-width: $lg) {
+          padding-bottom: 2rem;
+        }
+      }
+    }
+  }
+
+  &__text {
+    @extend %text-24;
+    max-width: 100rem;
+  }
+
+  &__img {
+    width: 71.5rem;
+
+    @media (max-width: $lg) {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<form class="form form--@@width" action="/">
+  <div class="form__fields">
+    <label class="form__item">
+      <input class="form__input input" type="text">
+      <span class="form__placeholder">Имя</span>
+    </label>
+    <label class="form__item">
+      <input class="form__input input" type="text">
+      <span class="form__placeholder">
+        Телефон
+        <sup>*</sup>
+      </span>
+    </label>
+    <button class="btn btn__application" type="submit">Отправить</button>
+  </div>
+
+  @@if (isAgree === true) {
+    <p class="form__agree-text">
+      Заполняя эту форму, Вы даете согласие на обработку персональных данных
+    </p>
+  }
+</form>
