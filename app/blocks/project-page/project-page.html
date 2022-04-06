@@ -19,7 +19,22 @@
         },
       ])
     </ul>
-    @@include("blocks/card/card.html")
+    @@include("blocks/card/card.html", {
+      "classCard": "project-card",
+      "jpgImg1": "./assets/images/card/1.jpg",
+      "webpImg1": "./assets/images/card/1.webp",
+      "jpgImg2": "./assets/images/card/2.jpg",
+      "webpImg2": "./assets/images/card/2.webp",
+      "jpgImg3": "./assets/images/card/3.jpg",
+      "webpImg3": "./assets/images/card/3.webp",
+      "title": "Название проекта",
+      "isDescr": true,
+      "isDate": true,
+      "isBudget": true,
+      "priceTitle": "Бюджет",
+      "price": "1 390 BYN",
+      "btnText": "Заказать похожий"
+    })
   </div>
   @@include("blocks/application/application.html")
   @@include("blocks/earlier/earlier.html")

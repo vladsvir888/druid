@@ -1,24 +1,24 @@
-<article class="card">
+<article class="card @@classCard">
   <div class="card__wrap">
     <div class="card__slider-block">
       <div class="swiper card__slider-top galleryTop">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <picture>
-              <source srcset="./assets/images/pixel.png" data-srcset="./assets/images/card/1.webp" type="image/webp">
-              <img class="lazy" src="./assets/images/pixel.png" data-src="./assets/images/card/1.jpg" alt="img">
+              <source srcset="./assets/images/pixel.png" data-srcset="@@webpImg1" type="image/webp">
+              <img class="lazy" src="./assets/images/pixel.png" data-src="@@jpgImg1" alt="img">
             </picture>
           </div>
           <div class="swiper-slide">
             <picture>
-              <source srcset="./assets/images/pixel.png" data-srcset="./assets/images/card/2.webp" type="image/webp">
-              <img class="lazy" src="./assets/images/pixel.png" data-src="./assets/images/card/2.jpg" alt="img">
+              <source srcset="./assets/images/pixel.png" data-srcset="@@webpImg2" type="image/webp">
+              <img class="lazy" src="./assets/images/pixel.png" data-src="@@jpgImg2" alt="img">
             </picture>
           </div>
           <div class="swiper-slide">
             <picture>
-              <source srcset="./assets/images/pixel.png" data-srcset="./assets/images/card/3.webp" type="image/webp">
-              <img class="lazy" src="./assets/images/pixel.png" data-src="./assets/images/card/3.jpg" alt="img">
+              <source srcset="./assets/images/pixel.png" data-srcset="@@webpImg3" type="image/webp">
+              <img class="lazy" src="./assets/images/pixel.png" data-src="@@jpgImg3" alt="img">
             </picture>
           </div>
         </div>
@@ -37,20 +37,20 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <picture>
-              <source srcset="./assets/images/pixel.png" data-srcset="./assets/images/card/1.webp" type="image/webp">
-              <img class="lazy" src="./assets/images/pixel.png" data-src="./assets/images/card/1.jpg" alt="img">
+              <source srcset="./assets/images/pixel.png" data-srcset="@@webpImg1" type="image/webp">
+              <img class="lazy" src="./assets/images/pixel.png" data-src="@@jpgImg1" alt="img">
             </picture>
           </div>
           <div class="swiper-slide">
             <picture>
-              <source srcset="./assets/images/pixel.png" data-srcset="./assets/images/card/2.webp" type="image/webp">
-              <img class="lazy" src="./assets/images/pixel.png" data-src="./assets/images/card/2.jpg" alt="img">
+              <source srcset="./assets/images/pixel.png" data-srcset="@@webpImg2" type="image/webp">
+              <img class="lazy" src="./assets/images/pixel.png" data-src="@@jpgImg2" alt="img">
             </picture>
           </div>
           <div class="swiper-slide">
             <picture>
-              <source srcset="./assets/images/pixel.png" data-srcset="./assets/images/card/3.webp" type="image/webp">
-              <img class="lazy" src="./assets/images/pixel.png" data-src="./assets/images/card/3.jpg" alt="img">
+              <source srcset="./assets/images/pixel.png" data-srcset="@@webpImg3" type="image/webp">
+              <img class="lazy" src="./assets/images/pixel.png" data-src="@@jpgImg3" alt="img">
             </picture>
           </div>
         </div>
@@ -58,6 +58,33 @@
       <div class="swiper-pagination"></div>
     </div>
     <div class="card__content-block">
+
+      <div class="card__info card__content-item">
+        <h1 class="title card__info-title">@@title</h1>
+
+        @@if (isDescr === true) {
+          <div class="card__info-subtitle">Описание проекта</div>
+          <div class="card__info-descr">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam varius a velit vitae sollicitudin. Sed vitae risus est. Phasellus vulputate quam non diam condimentum vehicula. Duis feugiat orci egestas, interdum dolor vel, tincidunt augue. Morbi non magna nunc. Duis dapibus commodo ante at convallis. Fusce a odio eu est euismod congue vel ac arcu. Nullam sit amet tempus purus. Fusce volutpat congue nulla vitae interdum. Aenean eget pulvinar velit.
+          </div>
+        }
+
+      </div>
+
+      @@if (isDate === true) {
+        <div class="card__date card__content-item">
+          <span class="card__date-title">Дата</span>
+          <span class="card__date-value">февраль 2021</span>
+        </div>
+      }
+
+      @@if (isBudget === true) {
+        <div class="card__price card__content-item">
+          <div class="card__price-title">@@priceTitle</div>
+          <div class="card__price-value card__project-price-value">@@price</div>
+          <button class="btn btn__application">@@btnText</button>
+        </div>
+      }
 
     </div>
   </div>

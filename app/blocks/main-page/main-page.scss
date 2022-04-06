@@ -63,7 +63,7 @@
       &:not(:last-child) {
         padding-right: 3.2rem;
 
-        @media (max-width: $sm) {
+        @media (max-width: $md) {
           padding-right: 1.6rem;
         }
       }

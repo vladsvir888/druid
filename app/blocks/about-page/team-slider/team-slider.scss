@@ -10,10 +10,7 @@
       background: var(--gray);
     }
 
-    .swiper-horizontal > .swiper-pagination-progressbar,
-    .swiper-pagination-progressbar.swiper-pagination-horizontal,
-    .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,
-    .swiper-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+    .swiper-pagination-progressbar.swiper-pagination-horizontal {
       height: 0.8rem;
       left: 0;
       top: unset;

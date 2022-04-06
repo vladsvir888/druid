@@ -13,6 +13,15 @@ app.card = {
         el: '.swiper-pagination',
         type: 'progressbar',
       },
+      direction: 'horizontal',
+      breakpoints: {
+        768: {
+          direction: 'vertical', // 768-1024 меняем направление
+        },
+        1025: {
+          direction: 'horizontal',
+        },
+      },
     });
 
     const galleryTop = new Swiper('.galleryTop', {
@@ -25,6 +34,15 @@ app.card = {
       pagination: {
         el: '.swiper-pagination',
         type: 'progressbar',
+      },
+      direction: 'horizontal',
+      breakpoints: {
+        768: {
+          direction: 'vertical',
+        },
+        1025: {
+          direction: 'horizontal',
+        },
       },
       thumbs: {
         swiper: galleryBottom,
