@@ -1,0 +1,26 @@
+<main class="project-page main">
+  @@include("blocks/splide-autoscroll/splide.html", {
+    "type": "ourProjects"
+  })
+  <div class="container">
+    <ul class="breadcrumbs">
+      @@loop("blocks/breadcrumbs/breadcrumbs.html", [
+        {
+          "text": "Главная",
+          "isActive": false,
+        },
+        {
+          "text": "Наши проекты",
+          "isActive": false,
+        },
+        {
+          "text": "Название проекта",
+          "isActive": true,
+        },
+      ])
+    </ul>
+    @@include("blocks/card/card.html")
+  </div>
+  @@include("blocks/application/application.html")
+  @@include("blocks/earlier/earlier.html")
+</main>

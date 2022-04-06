@@ -1,0 +1,93 @@
+.card {
+  padding-bottom: 8rem;
+
+  &__slider-block {
+    width: 57.6rem;
+    position: relative;
+
+    img {
+      @extend %cover;
+    }
+
+    > * {
+      &:not(:last-child) {
+        padding-bottom: 2.4rem;
+      }
+    }
+
+    .swiper-pagination-progressbar {
+      background: var(--gray2);
+    }
+
+    .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+      background: var(--gray);
+    }
+
+    .swiper-horizontal > .swiper-pagination-progressbar,
+    .swiper-pagination-progressbar.swiper-pagination-horizontal,
+    .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,
+    .swiper-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+      height: 0.8rem;
+      left: 0;
+      top: unset;
+      bottom: 0;
+    }
+  }
+
+  &__slider-top {
+    height: 57.6rem;
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+      content: none;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      height: 100%;
+      top: 0;
+      background-color: rgba(26, 24, 23, 0.5);
+      width: 4rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.5s;
+      margin-top: -2.5rem;
+    }
+
+    .swiper-button-next,
+    .swiper-rtl .swiper-button-prev {
+      right: 0;
+    }
+
+    .swiper-button-prev,
+    .swiper-rtl .swiper-button-next {
+      left: 0;
+    }
+
+    &:hover {
+      .swiper-button-next,
+      .swiper-button-prev {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+  }
+
+  &__slider-bottom {
+    height: 17.6rem;
+
+    .swiper-slide {
+      opacity: 0.4;
+    }
+
+    .swiper-slide-thumb-active {
+      opacity: 1;
+    }
+  }
+
+  &__slider-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    fill: #fff;
+  }
+}

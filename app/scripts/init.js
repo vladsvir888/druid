@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   app.favourite.init();
   app.search.init();
   app.select.init();
+  app.card.init();
 
   new WOW().init();
 
