@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
   app.search.init();
   app.select.init();
   app.card.init();
+  app.productTabs.init();
+  app.sliderTabs.init();
 
   new WOW().init();
 

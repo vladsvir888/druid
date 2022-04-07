@@ -1,0 +1,150 @@
+<main class="catalog-category main">
+  @@include("blocks/splide-autoscroll/splide.html", {
+    "type": "catalog"
+  })
+  <div class="container">
+    <ul class="breadcrumbs">
+      @@loop("blocks/breadcrumbs/breadcrumbs.html", [
+        {
+          "text": "Главная",
+          "isActive": false,
+        },
+        {
+          "text": "Каталог",
+          "isActive": false,
+        },
+        {
+          "text": "Двери",
+          "isActive": true,
+        },
+      ])
+    </ul>
+    <section class="catalog-category__section-category">
+      <h1 class="title catalog-category__title">Двери</h1>
+      <div class="catalog-category__wrap">
+        <div class="catalog-category__start"></div>
+        <div class="catalog-category__end">
+          <div class="catalog-category__cards">
+            @@loop("blocks/product/product.html", [
+              {
+                "jpgImg": "./assets/images/product/1.png",
+                "webpImg": "./assets/images/product/1.webp",
+                "title": "Двери дуб “Нео” 205 со&nbsp;стеклянной вставкой 1",
+                "currentPrice": "от 440 BYN",
+                "oldPrice": "от 480 BYN",
+                "isSale": true,
+                "isSaleAndNew": false,
+              },
+              {
+                "jpgImg": "./assets/images/product/2.png",
+                "webpImg": "./assets/images/product/2.webp",
+                "title": "Двери филенчатые гладкие",
+                "currentPrice": "от 440 BYN",
+                "oldPrice": "от 480 BYN",
+                "isSale": false,
+                "isSaleAndNew": false,
+              },
+              {
+                "jpgImg": "./assets/images/product/1.png",
+                "webpImg": "./assets/images/product/1.webp",
+                "title": "Двери дуб “Нео” 205 со&nbsp;стеклянной вставкой 1",
+                "currentPrice": "от 440 BYN",
+                "oldPrice": "от 480 BYN",
+                "isSale": true,
+                "isSaleAndNew": false,
+              },
+              {
+                "jpgImg": "./assets/images/product/1.png",
+                "webpImg": "./assets/images/product/1.webp",
+                "title": "Двери дуб “Нео” 205 со&nbsp;стеклянной вставкой 1",
+                "currentPrice": "от 440 BYN",
+                "oldPrice": "от 480 BYN",
+                "isSale": false,
+                "isSaleAndNew": true,
+              },
+              {
+                "jpgImg": "./assets/images/product/1.png",
+                "webpImg": "./assets/images/product/1.webp",
+                "title": "Двери дуб “Нео” 205 со&nbsp;стеклянной вставкой 1",
+                "currentPrice": "от 440 BYN",
+                "oldPrice": "от 480 BYN",
+                "isSale": true,
+                "isSaleAndNew": false,
+              },
+              {
+                "jpgImg": "./assets/images/product/1.png",
+                "webpImg": "./assets/images/product/1.webp",
+                "title": "Двери дуб “Нео” 205 со&nbsp;стеклянной вставкой 1",
+                "currentPrice": "от 440 BYN",
+                "oldPrice": "от 480 BYN",
+                "isSale": true,
+                "isSaleAndNew": false,
+              },
+              {
+                "jpgImg": "./assets/images/product/1.png",
+                "webpImg": "./assets/images/product/1.webp",
+                "title": "Двери дуб “Нео” 205 со&nbsp;стеклянной вставкой 1",
+                "currentPrice": "от 440 BYN",
+                "oldPrice": "от 480 BYN",
+                "isSale": true,
+                "isSaleAndNew": false,
+              },
+              {
+                "jpgImg": "./assets/images/product/1.png",
+                "webpImg": "./assets/images/product/1.webp",
+                "title": "Двери дуб “Нео” 205 со&nbsp;стеклянной вставкой 1",
+                "currentPrice": "от 440 BYN",
+                "oldPrice": "от 480 BYN",
+                "isSale": false,
+                "isSaleAndNew": true,
+              },
+              {
+                "jpgImg": "./assets/images/product/1.png",
+                "webpImg": "./assets/images/product/1.webp",
+                "title": "Двери дуб “Нео” 205 со&nbsp;стеклянной вставкой 1",
+                "currentPrice": "от 440 BYN",
+                "oldPrice": "от 480 BYN",
+                "isSale": true,
+                "isSaleAndNew": false,
+              },
+              {
+                "jpgImg": "./assets/images/product/1.png",
+                "webpImg": "./assets/images/product/1.webp",
+                "title": "Двери дуб “Нео” 205 со&nbsp;стеклянной вставкой 1",
+                "currentPrice": "от 440 BYN",
+                "oldPrice": "от 480 BYN",
+                "isSale": false,
+                "isSaleAndNew": true,
+              },
+              {
+                "jpgImg": "./assets/images/product/1.png",
+                "webpImg": "./assets/images/product/1.webp",
+                "title": "Двери дуб “Нео” 205 со&nbsp;стеклянной вставкой 1",
+                "currentPrice": "от 440 BYN",
+                "oldPrice": "от 480 BYN",
+                "isSale": true,
+                "isSaleAndNew": false,
+              },
+              {
+                "jpgImg": "./assets/images/product/1.png",
+                "webpImg": "./assets/images/product/1.webp",
+                "title": "Двери дуб “Нео” 205 со&nbsp;стеклянной вставкой 1",
+                "currentPrice": "от 440 BYN",
+                "oldPrice": "от 480 BYN",
+                "isSale": true,
+                "isSaleAndNew": false,
+              },
+            ])
+          </div>
+          @@include("blocks/load-more/load-more.html", {
+            "text": "Показать еще 12 товаров"
+          })
+          @@include("blocks/pagination/pagination.html")
+        </div>
+      </div>
+    </section>
+  </div>
+  @@include("blocks/application/application.html")
+  @@include("blocks/earlier/earlier.html")
+</main>
+

@@ -1,0 +1,36 @@
+.catalog-category {
+  &__section-category {
+    @extend %pb-8;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__wrap {
+    display: flex;
+
+    > * {
+      &:not(:last-child) {
+        margin-right: 2.4rem;
+      }
+    }
+  }
+
+  &__start {
+    width: 33.6rem;
+    height: 100rem;
+    background-color: transparent;
+    border: 0.1rem solid var(--gray);
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.4rem;
+
+    &:not(:last-child) {
+      @extend %pb-8;
+    }
+  }
+}

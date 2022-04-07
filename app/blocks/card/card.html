@@ -69,7 +69,22 @@
           </div>
         }
 
+        @@if (isArticle === true) {
+          <div class="card__article">арт. 656543153463</div>
+        }
+
       </div>
+
+      @@if (isSet === true) {
+        <div class="card__set card__content-item">
+          <div class="card__set-title">Стандартный комплект</div>
+          <ul class="card__set-list">
+            <li class="card__set-item">Коробка т/скопич эмаль с уплотнителем Эстэль</li>
+            <li class="card__set-item">Наличник т/скопич эмаль</li>
+          </ul>
+          <p class="card__set-text">Так же возможно изготовления нестандартных размеров - просто свяжитесь с нашим специалистом для уточнения информации.</p>
+        </div>
+      }
 
       @@if (isDate === true) {
         <div class="card__date card__content-item">
@@ -78,11 +93,35 @@
         </div>
       }
 
+      @@if (isColor === true) {
+        <div class="card__color card__content-item">
+          <div class="card__color-title">Цвет:</div>
+          <a href="#" class="card__color-link">Посмотрите всю палитру цветов</a>
+        </div>
+      }
+
       @@if (isBudget === true) {
         <div class="card__price card__content-item">
           <div class="card__price-title">@@priceTitle</div>
           <div class="card__price-value card__project-price-value">@@price</div>
           <button class="btn btn__application">@@btnText</button>
+        </div>
+      }
+
+      @@if (isPrice === true) {
+        <div class="card__price card__content-item">
+          <div class="card__price-title">@@priceTitle</div>
+          <div class="card__price-wrap">
+            <div class="card__price-inner">
+              <div class="card__price-value">@@price</div>
+
+              @@if (isOldPrice === true) {
+                <div class="card__price-old-value">от 400 BYN</div>
+              }
+
+            </div>
+            <button class="btn btn__application">@@btnText</button>
+          </div>
         </div>
       }
 

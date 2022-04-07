@@ -1,0 +1,107 @@
+<main class="catalog-page main">
+  @@include("blocks/splide-autoscroll/splide.html", {
+    "type": "catalog"
+  })
+  <div class="container">
+    <ul class="breadcrumbs">
+      @@loop("blocks/breadcrumbs/breadcrumbs.html", [
+        {
+          "text": "Главная",
+          "isActive": false,
+        },
+        {
+          "text": "Каталог",
+          "isActive": true,
+        },
+      ])
+    </ul>
+  </div>
+  <section class="catalog-page__catalog-section">
+    <div class="container">
+      <h1 class="catalog-page__title title">каталог</h1>
+    </div>
+
+    <a href="#" class="catalog-page__catalog-item">
+      <div class="catalog-page__catalog-content">
+        <h2 class="catalog-page__content-title">Двери</h2>
+        <div class="arrow-link">
+          <span>Выбрать</span>
+          <svg class="arrow-link__icon" viewBox="0 0 100 100">
+            <use xlink:href="./assets/images/sprite.svg#arrow-right"></use>
+          </svg>
+        </div>
+      </div>
+      <picture>
+        <source srcset="./assets/images/pixel.png" data-srcset="./assets/images/catalog/1.webp" type="image/webp">
+        <img class="lazy catalog-page__img" src="./assets/images/pixel.png" data-src="./assets/images/catalog/1.jpg" alt="img">
+      </picture>
+    </a>
+
+    <a href="#" class="catalog-page__catalog-item">
+      <div class="catalog-page__catalog-content">
+        <h2 class="catalog-page__content-title">Паркет</h2>
+        <div class="arrow-link">
+          <span>Выбрать</span>
+          <svg class="arrow-link__icon" viewBox="0 0 100 100">
+            <use xlink:href="./assets/images/sprite.svg#arrow-right"></use>
+          </svg>
+        </div>
+      </div>
+      <picture>
+        <source srcset="./assets/images/pixel.png" data-srcset="./assets/images/catalog/2.webp" type="image/webp">
+        <img class="lazy catalog-page__img" src="./assets/images/pixel.png" data-src="./assets/images/catalog/2.jpg" alt="img">
+      </picture>
+    </a>
+
+    <a href="#" class="catalog-page__catalog-item">
+      <div class="catalog-page__catalog-content">
+        <h2 class="catalog-page__content-title">Мебель</h2>
+        <div class="arrow-link">
+          <span>Выбрать</span>
+          <svg class="arrow-link__icon" viewBox="0 0 100 100">
+            <use xlink:href="./assets/images/sprite.svg#arrow-right"></use>
+          </svg>
+        </div>
+      </div>
+      <picture>
+        <source srcset="./assets/images/pixel.png" data-srcset="./assets/images/catalog/3.webp" type="image/webp">
+        <img class="lazy catalog-page__img" src="./assets/images/pixel.png" data-src="./assets/images/catalog/3.jpg" alt="img">
+      </picture>
+    </a>
+
+    <a href="#" class="catalog-page__catalog-item">
+      <div class="catalog-page__catalog-content">
+        <h2 class="catalog-page__content-title">Декор</h2>
+        <div class="arrow-link">
+          <span>Выбрать</span>
+          <svg class="arrow-link__icon" viewBox="0 0 100 100">
+            <use xlink:href="./assets/images/sprite.svg#arrow-right"></use>
+          </svg>
+        </div>
+      </div>
+      <picture>
+        <source srcset="./assets/images/pixel.png" data-srcset="./assets/images/catalog/4.webp" type="image/webp">
+        <img class="lazy catalog-page__img" src="./assets/images/pixel.png" data-src="./assets/images/catalog/4.jpg" alt="img">
+      </picture>
+    </a>
+
+    <a href="#" class="catalog-page__catalog-item">
+      <div class="catalog-page__catalog-content">
+        <h2 class="catalog-page__content-title">Освещение</h2>
+        <div class="arrow-link">
+          <span>Выбрать</span>
+          <svg class="arrow-link__icon" viewBox="0 0 100 100">
+            <use xlink:href="./assets/images/sprite.svg#arrow-right"></use>
+          </svg>
+        </div>
+      </div>
+      <picture>
+        <source srcset="./assets/images/pixel.png" data-srcset="./assets/images/catalog/5.webp" type="image/webp">
+        <img class="lazy catalog-page__img" src="./assets/images/pixel.png" data-src="./assets/images/catalog/5.jpg" alt="img">
+      </picture>
+    </a>
+
+  </section>
+  @@include("blocks/application/application.html")
+  @@include("blocks/earlier/earlier.html")
+</main>

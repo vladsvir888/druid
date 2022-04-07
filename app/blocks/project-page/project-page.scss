@@ -1,3 +1,20 @@
 .project-page {
-  
+  &__product {
+    @extend %pb-8;
+  }
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem 2.4rem;
+
+    @media (max-width: $lg) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    @media (max-width: $sm) {
+      grid-template-columns: 1fr;
+    }
+  }
 }

@@ -21,6 +21,7 @@ body {
   --bgc-color: #fff;
   --gray: #bbb;
   --gray2: #f2f2f2;
+  --gray3: #818181;
   --orange: #e09654;
   --aside-bgc: rgba(255, 255, 255, 0.6);
   --position-block-bgc: linear-gradient(270deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
@@ -28,6 +29,8 @@ body {
   --contacts-info-bg: #f9f9f9;
   --input-border-bottom: #1a1817;
   --search-color-placeholder: #999;
+  --product-hover-bg: #fff;
+  --catalog-hover-bg: #1a1817;
 
   color: var(--text-color);
   background-color: var(--bgc-color);
@@ -47,6 +50,8 @@ body.dark-theme {
   --burger-menu-bgc: rgba(0, 0, 0, 0.6);
   --contacts-info-bg: #333;
   --input-border-bottom: #333;
+  --product-hover-bg: #333;
+  --catalog-hover-bg: #333;
 
   color: var(--text-color);
   background-color: var(--bgc-color);
@@ -194,11 +199,14 @@ input {
   @extend %text-18;
   font-weight: 500;
   color: var(--text-color);
+  border: none;
+  background-color: transparent;
+  transition: all 0.3s;
 
   &__icon {
     width: 2.5rem;
     height: 2.5rem;
-    transition: transform 0.3s;
+    transition: all 0.3s;
     fill: var(--text-color);
   }
 

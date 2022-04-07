@@ -1,0 +1,27 @@
+<a href="#" class="product">
+  <div class="product__hover"></div>
+  
+  <div class="product__content">
+    <picture>
+      <source srcset="./assets/images/pixel.png" data-srcset="@@webpImg" type="image/webp">
+      <img class="lazy product__img" src="./assets/images/pixel.png" data-src="@@jpgImg" alt="img">
+    </picture>
+    <div class="product__title">@@title</div>
+    <div class="product__prices">
+      <span class="product__current-price">@@currentPrice</span>
+      <span class="product__old-price">@@oldPrice</span>
+    </div>
+  </div>
+
+  @@if (isSale === true) {
+    <div class="product__sale product__label">
+      <img class="lazy" src="./assets/images/pixel.png" data-src="./assets/images/sale.png" alt="img">
+    </div>
+  }
+
+  @@if (isSaleAndNew === true) {
+    <div class="product__sale-new product__label">
+      <img class="lazy" src="./assets/images/pixel.png" data-src="./assets/images/sale-new.png" alt="img">
+    </div>
+  }
+</a>

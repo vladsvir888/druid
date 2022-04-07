@@ -1,0 +1,107 @@
+@@if (type === "1") {
+  <main class="catalog-product-page main">
+    @@include("blocks/splide-autoscroll/splide.html", {
+      "type": "catalog"
+    })
+    <div class="container">
+      <ul class="breadcrumbs">
+        @@loop("blocks/breadcrumbs/breadcrumbs.html", [
+          {
+            "text": "Главная",
+            "isActive": false,
+          },
+          {
+            "text": "Каталог",
+            "isActive": false,
+          },
+          {
+            "text": "Мебель",
+            "isActive": false,
+          },
+          {
+            "text": "Кондименты (ольха) 160*160*80мм",
+            "isActive": true,
+          },
+        ])
+      </ul>
+      @@include("blocks/card/card.html", {
+        "classCard": "product-card",
+        "jpgImg1": "./assets/images/card/4.jpg",
+        "webpImg1": "./assets/images/card/4.webp",
+        "jpgImg2": "./assets/images/card/4.jpg",
+        "webpImg2": "./assets/images/card/4.webp",
+        "jpgImg3": "./assets/images/card/4.jpg",
+        "webpImg3": "./assets/images/card/4.webp",
+        "title": "Кондименты (ольха) 160*160*80мм",
+        "isDescr": false,
+        "isDate": false,
+        "isBudget": false,
+        "priceTitle": "цена",
+        "price": "40 BYN",
+        "btnText": "Заказать",
+        "isArticle": true,
+        "isSet": true,
+        "isPrice": true,
+        "isOldPrice": false,
+        "isColor": false,
+      })
+      @@include("blocks/catalog-product-page/tabs/tabs.html")
+    </div>
+    @@include("blocks/application/application.html")
+    @@include("blocks/earlier/earlier.html")
+  </main>
+}
+
+@@if (type === "2") {
+  <main class="catalog-product-page main">
+    @@include("blocks/splide-autoscroll/splide.html", {
+      "type": "catalog"
+    })
+    <div class="container">
+      <ul class="breadcrumbs">
+        @@loop("blocks/breadcrumbs/breadcrumbs.html", [
+          {
+            "text": "Главная",
+            "isActive": false,
+          },
+          {
+            "text": "Каталог",
+            "isActive": false,
+          },
+          {
+            "text": "Мебель",
+            "isActive": false,
+          },
+          {
+            "text": "Двери дуб филенчатые со стеклянной вставкой 10",
+            "isActive": true,
+          },
+        ])
+      </ul>
+      @@include("blocks/card/card.html", {
+        "classCard": "product-card",
+        "jpgImg1": "./assets/images/card/5.png",
+        "webpImg1": "./assets/images/card/5.webp",
+        "jpgImg2": "./assets/images/card/5.png",
+        "webpImg2": "./assets/images/card/5.webp",
+        "jpgImg3": "./assets/images/card/5.png",
+        "webpImg3": "./assets/images/card/5.webp",
+        "title": "Двери дуб филенчатые со стеклянной вставкой 10",
+        "isDescr": false,
+        "isDate": false,
+        "isBudget": false,
+        "priceTitle": "цена",
+        "price": "от 360 BYN",
+        "btnText": "Заказать",
+        "isArticle": true,
+        "isSet": true,
+        "isPrice": true,
+        "isOldPrice": true,
+        "isColor": true,
+      })
+      @@include("blocks/catalog-product-page/tabs/tabs.html")
+    </div>
+    @@include("blocks/application/application.html")
+    @@include("blocks/earlier/earlier.html")
+  </main>
+}
