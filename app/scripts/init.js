@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   app.card.init();
   app.productTabs.init();
   app.sliderTabs.init();
+  app.filterAccordion.init();
 
   new WOW().init();
 

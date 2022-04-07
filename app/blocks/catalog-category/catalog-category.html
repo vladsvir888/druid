@@ -22,8 +22,11 @@
     <section class="catalog-category__section-category">
       <h1 class="title catalog-category__title">Двери</h1>
       <div class="catalog-category__wrap">
-        <div class="catalog-category__start"></div>
+        <div class="catalog-category__start">
+          @@include("blocks/filter/filter.html")
+        </div>
         <div class="catalog-category__end">
+          @@include("blocks/sort/sort.html")
           <div class="catalog-category__cards">
             @@loop("blocks/product/product.html", [
               {

@@ -1,0 +1,30 @@
+.form-sort {
+  padding-bottom: 1.6rem;
+  color: var(--gray3);
+
+  @extend %text-12;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    > * {
+      &:not(:last-child) {
+        padding-right: 3.2rem;
+      }
+    }
+  }
+}
+
+.radio-btn {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+}
+
+.radio-btn:checked + .radio-btn-text {
+  color: var(--text-color);
+}

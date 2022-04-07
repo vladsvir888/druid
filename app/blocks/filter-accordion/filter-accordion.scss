@@ -1,0 +1,60 @@
+.form-filter {
+  &__accordion-item {
+    border-bottom: 0.1rem solid var(--gray);
+    padding: 0.8rem 0;
+    transition: padding 0.3s;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  &__accordion-btn {
+    @extend %text-16;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--gray3);
+    display: inline-block;
+    transition: all 0.3s;
+
+    &:hover {
+      color: var(--text-color);
+    }
+  }
+
+  &__accordion-links {
+    @extend %text-16;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+
+    > * {
+      &:not(:last-child) {
+        padding-bottom: 0.8rem;
+      }
+    }
+  }
+
+  &__accordion-link {
+    color: var(--gray3);
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--text-color);
+    }
+  }
+}
+
+.form-filter__accordion-item.is-active {
+  padding: 0.8rem 0 1.6rem;
+
+  .form-filter__accordion-btn {
+    color: var(--text-color);
+    padding-bottom: 1.6rem;
+  }
+}

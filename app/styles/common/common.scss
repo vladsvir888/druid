@@ -77,6 +77,23 @@ body.dark-theme {
     background-color: var(--bgc-color);
     border: 0.2rem solid var(--text-color);
   }
+
+  .checkbox:checked + .checkbox-style {
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      content: '';
+      background: url('../../assets/images/sprite-icons/checked-white.svg');
+      width: 1rem;
+      height: 1rem;
+
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
 }
 
 a {
@@ -261,12 +278,8 @@ input {
 
   &__ul {
     display: grid;
-    grid-template-columns: repeat(4, max-content);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2.4rem;
-
-    @media (max-width: $lg) {
-      grid-template-columns: repeat(3, 1fr);
-    }
 
     @media (max-width: $md) {
       grid-template-columns: 1fr;
@@ -274,7 +287,7 @@ input {
   }
 
   &__link {
-    @extend %text-18;
+    @extend %text-24;
     font-weight: 700;
     text-transform: uppercase;
   }

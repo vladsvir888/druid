@@ -19,9 +19,10 @@
 
   &__start {
     width: 33.6rem;
-    height: 100rem;
-    background-color: transparent;
-    border: 0.1rem solid var(--gray);
+  }
+
+  &__end {
+    width: 107.4rem;
   }
 
   &__cards {

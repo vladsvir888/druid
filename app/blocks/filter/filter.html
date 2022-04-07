@@ -1,0 +1,29 @@
+<form class="form-filter" action="/">
+  <div class="form-filter__wrap">
+    @@include("blocks/filter-accordion/filter-accordion.html")
+    <div class="form-filter__material">
+      <div class="form-filter__material-title">материал</div>
+      <div class="form-filter__material-wrap">
+        <label class="label">
+          <input class="checkbox" type="checkbox">
+          <span class="checkbox-style"></span>
+          <span class="checkbox-style-text">Дуб</span>
+        </label>
+        <label class="label">
+          <input class="checkbox" type="checkbox">
+          <span class="checkbox-style"></span>
+          <span class="checkbox-style-text">Ольха</span>
+        </label>
+        <label class="label">
+          <input class="checkbox" type="checkbox">
+          <span class="checkbox-style"></span>
+          <span class="checkbox-style-text">Сосна</span>
+        </label>
+      </div>
+    </div>
+    <div class="form-filter__btns">
+      <button class="form-filter__btn form-filter__btn-show" type="submit">Показать</button>
+      <input class="form-filter__btn form-filter__btn-reset" type="reset">
+    </div>
+  </div>
+</form>
