@@ -5,6 +5,11 @@
         padding-bottom: 3.2rem;
       }
     }
+
+    .form-filter__header {
+      padding-bottom: 1.6rem;
+      margin-bottom: 1.6rem;
+    }
   }
 
   &__material {
@@ -17,9 +22,29 @@
     font-weight: 700;
     text-transform: uppercase;
     padding-bottom: 2.4rem;
+
+    @media (max-width: $lg) {
+      color: #1a1817;
+    }
   }
 
   &__material-wrap {
+    display: inline-block;
+    > * {
+      &:not(:last-child) {
+        padding-bottom: 1.2rem;
+      }
+    }
+  }
+
+  &__prices {
+    border-bottom: 0.1rem solid var(--gray);
+    margin-bottom: 3.2rem;
+  }
+
+  &__prices-wrap {
+    display: inline-block;
+
     > * {
       &:not(:last-child) {
         padding-bottom: 1.2rem;
@@ -50,11 +75,121 @@
     border: none;
     background-color: var(--text-color);
     color: var(--bgc-color);
+
+    @media (max-width: $lg) {
+      color: #fff;
+      background-color: #1a1817;
+    }
   }
 
   &__btn-reset {
     color: var(--gray);
     border: 0.2rem solid var(--gray);
+  }
+
+  .noUi-target {
+    background: #bbb;
+    border: none;
+    box-shadow: none;
+    border-radius: 0.5rem;
+  }
+
+  .noUi-connect {
+    background: #bbb;
+  }
+
+  .noUi-horizontal {
+    height: 0.5rem;
+  }
+
+  .noUi-horizontal .noUi-handle {
+    width: 5rem;
+    height: 5rem;
+    background: url('../../assets/images/sprite-icons/range.svg') no-repeat center / contain;
+  }
+
+  .noUi-handle {
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .noUi-handle::after,
+  .noUi-handle::before {
+    content: none;
+  }
+
+  .noUi-horizontal .noUi-handle {
+    top: -1.2rem;
+    right: -3rem;
+  }
+
+  &__range-title {
+    @extend %text-16;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 2.4rem;
+
+    @media (max-width: $lg) {
+      color: #1a1817;
+    }
+  }
+
+  &__range-values {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+
+    @extend %text-14;
+    color: var(--text-color);
+
+    span {
+      color: var(--gray);
+    }
+
+    @media (max-width: $lg) {
+      color: #1a1817;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.1rem solid var(--gray);
+
+    @media (min-width: 1025px) {
+      display: none;
+    }
+  }
+
+  &__close-btn {
+    border: none;
+    background: transparent;
+  }
+
+  &__close-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  &__filter-btn {
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #1a1817;
+    @extend %text-16;
+  }
+
+  &__filter-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 2.4rem;
+    fill: #1a1817;
   }
 }
 

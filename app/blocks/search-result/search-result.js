@@ -6,7 +6,7 @@ app.select = {
     if (select === null) return;
 
     select.addEventListener('click', (e) => {
-      if (e.target.classList.contains('search-result__select-dropdown')) return;
+      // if (e.target.classList.contains('search-result__select-dropdown')) return;
 
       select.classList.toggle('is-active');
     });
@@ -16,7 +16,7 @@ app.select = {
     selectDropdown.addEventListener('click', (e) => {
       const { target } = e;
 
-      if (!target.classList.contains('search-result__select-option')) return;
+      if (!target.classList.contains('search-result__select-option')) return e.stopPropagation();
 
       const attr = target.dataset.type;
 
@@ -25,6 +25,10 @@ app.select = {
       closestEl.firstElementChild.setAttribute('data-type', attr);
 
       closestEl.firstElementChild.firstElementChild.textContent = attr;
+
+      select.classList.remove('is-active');
+
+      e.stopPropagation();
     });
   },
 };

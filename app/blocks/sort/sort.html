@@ -1,17 +1,27 @@
 <form class="form-sort" action="/">
   <div class="form-sort__wrap">
     <div class="form-sort__title">Сортировать:</div>
-    <label>
-      <input class="radio-btn" type="radio" name="radio" checked>
-      <span class="radio-btn-text">по популярности</span>
-    </label>
-    <label>
-      <input class="radio-btn" type="radio" name="radio">
-      <span class="radio-btn-text">по возрастанию цены</span>
-    </label>
-    <label>
-      <input class="radio-btn" type="radio" name="radio">
-      <span class="radio-btn-text">по убыванию цены</span>
-    </label>
+    <div class="form-sort__wrap-inner">
+      <div class="form-sort__select-btn sortSelect" data-type="">
+        <span>по популярности</span>
+        <svg class="form-sort__select-icon" viewBox="0 0 100 100">
+          <use xlink:href="./assets/images/sprite.svg#sort-arrow"></use>
+        </svg>
+      </div>
+      <div class="form-sort__select-dropdown sortSelectDropdown">
+        <label class="form-sort__select-option">
+          <input class="radio-btn" type="radio" name="radio" checked>
+          <span class="radio-btn-text" data-type="по популярности">по популярности</span>
+        </label>
+        <label class="form-sort__select-option">
+          <input class="radio-btn" type="radio" name="radio">
+          <span class="radio-btn-text" data-type="по возрастанию цены">по возрастанию цены</span>
+        </label>
+        <label class="form-sort__select-option">
+          <input class="radio-btn" type="radio" name="radio">
+          <span class="radio-btn-text" data-type="по убыванию цены">по убыванию цены</span>
+        </label>
+      </div>
+    </div>
   </div>
 </form>

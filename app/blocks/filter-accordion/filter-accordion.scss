@@ -16,10 +16,6 @@
     color: var(--gray3);
     display: inline-block;
     transition: all 0.3s;
-
-    &:hover {
-      color: var(--text-color);
-    }
   }
 
   &__accordion-links {
@@ -54,7 +50,7 @@
   padding: 0.8rem 0 1.6rem;
 
   .form-filter__accordion-btn {
-    color: var(--text-color);
+    color: var(--gray);
     padding-bottom: 1.6rem;
   }
 }

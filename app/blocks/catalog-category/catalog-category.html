@@ -22,11 +22,23 @@
     <section class="catalog-category__section-category">
       <h1 class="title catalog-category__title">Двери</h1>
       <div class="catalog-category__wrap">
-        <div class="catalog-category__start">
-          @@include("blocks/filter/filter.html")
+        <div class="catalog-category__wrap-inner categoryFilter">
+          <div class="catalog-category__start">
+            @@include("blocks/filter/filter.html")
+          </div>
         </div>
         <div class="catalog-category__end">
-          @@include("blocks/sort/sort.html")
+          <div class="catalog-category__header-wrap">
+            <div class="catalog-category__filter-hidden">
+              <button class="catalog-category__filter-btn filterBtn">
+                <svg class="catalog-category__filter-icon" viewBox="0 0 100 100">
+                  <use xlink:href="./assets/images/sprite.svg#filter"></use>
+                </svg>
+                <span class="catalog-category__filter-text">фильтр</span>
+              </button>
+            </div>
+            @@include("blocks/sort/sort.html")
+          </div>
           <div class="catalog-category__cards">
             @@loop("blocks/product/product.html", [
               {

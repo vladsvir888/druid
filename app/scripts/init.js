@@ -15,6 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
   app.productTabs.init();
   app.sliderTabs.init();
   app.filterAccordion.init();
+  app.filter.init();
+  app.sortSelect.init();
 
   new WOW().init();
 
