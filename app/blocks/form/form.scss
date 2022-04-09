@@ -3,6 +3,14 @@
     max-width: 45.6rem;
   }
 
+  &--bigger {
+    width: 51.7rem;
+
+    @media (max-width: $md) {
+      width: 100%;
+    }
+  }
+
   > * {
     &:not(:last-child) {
       margin-bottom: 0.8rem;
@@ -52,11 +60,24 @@
   }
 }
 
+small {
+  @extend %text-14;
+  color: var(--orange);
+  position: absolute;
+  top: 1.2rem;
+  right: 0;
+  display: none;
+}
+
 .form__item.is-active {
   .form__placeholder {
     left: 0;
     top: -2.5rem;
     color: var(--orange);
     font-size: 1.2rem;
+  }
+
+  small {
+    display: block;
   }
 }

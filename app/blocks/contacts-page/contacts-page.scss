@@ -7,6 +7,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2.6rem;
+    align-items: flex-start;
 
     @extend %pb-8;
 

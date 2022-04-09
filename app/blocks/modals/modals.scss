@@ -1,0 +1,87 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 81.9rem;
+  padding: 10rem 15rem;
+  background-color: var(--bgc-color);
+  pointer-events: none;
+
+  @media (max-width: $lg) {
+    width: 60rem;
+    padding: 6rem 4rem;
+  }
+
+  @media (max-width: $md) {
+    width: 45rem;
+  }
+
+  @media (max-width: $sm) {
+    width: 100%;
+    height: 100%;
+    padding: 6rem 2rem 3rem;
+  }
+
+  &__title {
+    @extend %text-28;
+    text-align: center;
+    padding-bottom: 6rem;
+    color: var(--text-color);
+
+    @media (max-width: $lg) {
+      padding-bottom: 3rem;
+    }
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    border: none;
+    background: transparent;
+  }
+
+  &__close-icon {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--text-color);
+  }
+
+  .btn__application {
+    width: 23rem;
+    border: 0.1rem solid #1a1817;
+    background-color: transparent;
+    color: #1a1817;
+    padding: 1rem 3rem;
+    text-transform: unset;
+    font-weight: 400;
+
+    @media (max-width: $sm) {
+      width: 100%;
+    }
+  }
+}
+
+.modal-overlay.is-active {
+  opacity: 1;
+  visibility: visible;
+
+  .modal {
+    pointer-events: auto;
+  }
+}

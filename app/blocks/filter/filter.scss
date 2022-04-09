@@ -30,6 +30,7 @@
 
   &__material-wrap {
     display: inline-block;
+
     > * {
       &:not(:last-child) {
         padding-bottom: 1.2rem;
@@ -106,6 +107,8 @@
     width: 5rem;
     height: 5rem;
     background: url('../../assets/images/sprite-icons/range.svg') no-repeat center / contain;
+    top: -1.2rem;
+    right: -3rem;
   }
 
   .noUi-handle {
@@ -118,11 +121,6 @@
   .noUi-handle::after,
   .noUi-handle::before {
     content: none;
-  }
-
-  .noUi-horizontal .noUi-handle {
-    top: -1.2rem;
-    right: -3rem;
   }
 
   &__range-title {
@@ -182,6 +180,7 @@
     font-weight: 700;
     text-transform: uppercase;
     color: #1a1817;
+
     @extend %text-16;
   }
 

@@ -278,6 +278,7 @@
   &__price-inner {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 
     > * {
       &:not(:last-child) {

@@ -45,8 +45,12 @@
   &__header-wrap {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: flex-end;
-    padding-bottom: 1.6rem;
+
+    > * {
+      margin-bottom: 1.6rem;
+    }
 
     @media (max-width: $lg) {
       justify-content: space-between;
@@ -67,6 +71,7 @@
     align-items: center;
     border: none;
     background-color: transparent;
+
     @extend %text-16;
     font-weight: 700;
     text-transform: uppercase;

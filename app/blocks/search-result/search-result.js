@@ -1,14 +1,16 @@
 app.select = {
   name: 'Селект на странице поиска',
   init() {
-    const select = document.querySelector('.search-result__select');
+    const select = document.querySelector('.searchSelect');
 
     if (select === null) return;
 
     select.addEventListener('click', (e) => {
-      // if (e.target.classList.contains('search-result__select-dropdown')) return;
+      const { target } = e;
 
-      select.classList.toggle('is-active');
+      const parent = target.closest('.search-result__select');
+
+      parent.classList.add('is-active');
     });
 
     const selectDropdown = document.querySelector('.search-result__select-dropdown');
@@ -16,7 +18,7 @@ app.select = {
     selectDropdown.addEventListener('click', (e) => {
       const { target } = e;
 
-      if (!target.classList.contains('search-result__select-option')) return e.stopPropagation();
+      if (!target.classList.contains('search-result__select-option')) return;
 
       const attr = target.dataset.type;
 
@@ -26,9 +28,7 @@ app.select = {
 
       closestEl.firstElementChild.firstElementChild.textContent = attr;
 
-      select.classList.remove('is-active');
-
-      e.stopPropagation();
+      closestEl.classList.remove('is-active');
     });
   },
 };

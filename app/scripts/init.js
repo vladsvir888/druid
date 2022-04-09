@@ -17,8 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   app.filterAccordion.init();
   app.filter.init();
   app.sortSelect.init();
-
-  new WOW().init();
+  app.modals.init();
 
   new LazyLoad();
 });

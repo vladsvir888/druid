@@ -37,7 +37,6 @@
 
   &__form-input {
     width: 100rem;
-    height: 4.4rem;
     padding: 1.2rem 2rem;
     border: 0.1rem solid var(--gray2);
 
@@ -48,7 +47,6 @@
   &__select {
     position: relative;
     width: 18rem;
-    height: 4.4rem;
   }
 
   &__select-btn {
@@ -57,7 +55,7 @@
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    padding: 1rem 2rem;
+    padding: 1.6rem 2rem;
     cursor: pointer;
     border: 0.1rem solid var(--gray2);
 
@@ -119,7 +117,7 @@
     border: 0.2rem solid var(--orange);
     text-align: center;
     width: 13rem;
-    height: 4.4rem;
+    padding: 1.2rem 2rem;
   }
 
   &__center-item {
