@@ -24,8 +24,6 @@ app.card = {
       },
     });
 
-    galleryBottom.scrollbar.updateSize();
-
     const galleryTop = new Swiper('.galleryTop', {
       loop: true,
       spaceBetween: 15,
