@@ -24,16 +24,14 @@ app.card = {
       },
     });
 
+    galleryBottom.scrollbar.updateSize();
+
     const galleryTop = new Swiper('.galleryTop', {
       loop: true,
       spaceBetween: 15,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'progressbar',
       },
       direction: 'horizontal',
       breakpoints: {
@@ -47,6 +45,25 @@ app.card = {
       thumbs: {
         swiper: galleryBottom,
       },
+    });
+
+    const progressbar = document.querySelector('.swiper-pagination-progressbar');
+
+    window.addEventListener('resize', () => {
+      if (window.matchMedia('(min-width: 1025px)').matches) {
+        progressbar.classList.add('swiper-pagination-horizontal');
+        progressbar.classList.remove('swiper-pagination-vertical');
+      }
+
+      if (window.matchMedia('(max-width: 1024px)').matches) {
+        progressbar.classList.remove('swiper-pagination-horizontal');
+        progressbar.classList.add('swiper-pagination-vertical');
+      }
+
+      if (window.matchMedia('(max-width: 767px)').matches) {
+        progressbar.classList.add('swiper-pagination-horizontal');
+        progressbar.classList.remove('swiper-pagination-vertical');
+      }
     });
   },
 };
