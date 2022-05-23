@@ -6,11 +6,7 @@
   &__catalog-item {
     display: flex;
 
-    @media (max-width: $lg) {
-      flex-direction: column;
-    }
-
-    &:hover {
+    &.is-active {
       .catalog-page__catalog-content {
         background-color: var(--catalog-hover-bg);
         color: #fff;
@@ -25,6 +21,26 @@
         }
       }
     }
+
+    @media (max-width: $lg) {
+      flex-direction: column;
+    }
+
+    // &:hover {
+    //   .catalog-page__catalog-content {
+    //     background-color: var(--catalog-hover-bg);
+    //     color: #fff;
+    //   }
+
+    //   .arrow-link {
+    //     color: #fff;
+
+    //     &__icon {
+    //       fill: #fff;
+    //       transform: translateX(0.5rem);
+    //     }
+    //   }
+    // }
   }
 
   &__catalog-content {
